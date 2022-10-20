@@ -1,0 +1,45 @@
+{
+  "description": "{{messages.PROOF_TYPE_USER_LIST}}",
+  "criteria": [{ "name": "host", "page": 0 }],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_USER_LIST}}",
+    "format": "tabular",
+    "orientation": "landscape",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_USER_LIST}}",
+    "dataSet": "users",
+    "dataSetParams": {
+      "host": "{{criteria.host}}"
+    },
+    "noResultsMessage": "{{messages.NO_USERS}}",
+    "fields": [
+      {
+        "property": "User",
+        "label": "User",
+        "width": "400px",
+        "type": "text"
+      },
+      {
+        "property": "Host",
+        "label": "Host",
+        "width": "400px",
+        "type": "text"
+      },
+      {
+        "property": "account_locked",
+        "label": "Account Locked",
+        "width": "200px",
+        "type": "text"
+      },
+      {
+        "property": "password_expired",
+        "label": "Password Expired",
+        "width": "200px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://mysql.com"
+  }
+}

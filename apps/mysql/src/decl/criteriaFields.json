@@ -1,0 +1,17 @@
+{
+  "host": {
+    "type": "select",
+    "property": "host",
+    "label": "{{messages.LABEL_HOST}}",
+    "isRequired": true,
+    "dataSet": "hosts",
+    "valueProperty": "host",
+    "labelProperty": "host",
+    "fixedValues": [
+      {
+        "value": "{{constants.ID_ALL}}",
+        "label": "{{messages.LABEL_ALL_HOSTS}}"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "CONNECTOR_NAME": "MySQL",
+  "CREDENTIAL_INSTRUCTION_HEADER": "Please specify your MySQL host and enter your user credentials.",
+  "ERROR_INVALID_CREDENTIALS": "Invalid host, username, or password.",
+  "LABEL_ACCOUNT_LOCKED": "Account Locked",
+  "LABEL_ALL_HOSTS": "All Hosts",
+  "LABEL_HOST": "Host",
+  "LABEL_PASSWORD": "Password",
+  "LABEL_PASSWORD_EXPIRED": "Password Expired",
+  "LABEL_PROOF_TYPE": "Proof",
+  "LABEL_SERVER_HOST": "Server Host",
+  "LABEL_USER": "User",
+  "LABEL_USERNAME": "Username",
+  "NO_DATABASES": "No databases found.",
+  "NO_USERS": "No users found.",
+  "PROOF_TYPE_DATABASE_LIST": "Database List",
+  "PROOF_TYPE_USER_LIST": "User List"
+}
