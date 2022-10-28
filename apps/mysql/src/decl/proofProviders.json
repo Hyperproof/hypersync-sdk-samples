@@ -1,5 +1,8 @@
 {
-  "projectList": {
-    "label": "{{messages.PROOF_TYPE_PROJECT_LIST}}"
+  "databaseList": {
+    "label": "{{messages.PROOF_TYPE_DATABASE_LIST}}"
+  },
+  "userList": {
+    "label": "{{messages.PROOF_TYPE_USER_LIST}}"
   }
 }
