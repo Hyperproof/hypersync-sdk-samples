@@ -1,0 +1,7 @@
+{
+  "CONNECTOR_NAME": "Zoho",
+  "LABEL_PORTAL": "Portal",
+  "NO_PROJECT": "No projects found.",
+  "PROOF_TYPE_PROJECT_LIST": "Project List",
+  "USER_ACCOUNT_TEMPLATE": "Login ID: {{loginId}}"
+}

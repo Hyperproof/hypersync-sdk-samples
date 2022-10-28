@@ -1,0 +1,33 @@
+{
+  "description": "{{messages.PROOF_TYPE_PROJECT_LIST}}",
+  "criteria": [{ "name": "portal", "page": 0 }],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_PROJECT_LIST}}",
+    "format": "tabular",
+    "orientation": "portrait",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_PROJECT_LIST}}",
+    "dataSet": "projects",
+    "dataSetParams": {
+      "portal": "{{criteria.portal}}"
+    },
+    "noResultsMessage": "{{messages.NO_PROJECTS}}",
+    "fields": [
+      {
+        "property": "id_string",
+        "label": "ID",
+        "width": "400px",
+        "type": "text"
+      },
+      {
+        "property": "name",
+        "label": "Name",
+        "width": "400px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://zoho.com"
+  }
+}

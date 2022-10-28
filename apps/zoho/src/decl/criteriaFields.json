@@ -1,0 +1,11 @@
+{
+  "portal": {
+    "type": "select",
+    "property": "portal",
+    "label": "{{messages.LABEL_PORTAL}}",
+    "isRequired": true,
+    "dataSet": "portals",
+    "valueProperty": "id",
+    "labelProperty": "name"
+  }
+}

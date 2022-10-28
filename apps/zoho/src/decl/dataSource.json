@@ -1,0 +1,31 @@
+{
+  "dataSets": {
+    "currentUser": {
+      "description": "Returns information about the authorized user.",
+      "documentation": "https://help.zoho.com/portal/en/community/topic/oauth2-current-user",
+      "url": "restapi/portals/",
+      "transform": {
+        "loginId": "login_id"
+      },
+      "result": "object"
+    },
+    "portals": {
+      "description": "Returns a list of all the portals the user has access to.",
+      "documentation": "https://www.zoho.com/projects/help/rest-api/portals-api.html#alink1",
+      "url": "restapi/portals/",
+      "transform": {
+        "id": "$string(id)",
+        "name": "name"
+      },
+      "result": "array"
+    },
+    "projects": {
+      "description": "Returns a list of all the projects.",
+      "documentation": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink1",
+      "url": "restapi/portal/{{portal}}/projects/",
+      "result": "array"
+    }
+  },
+  "messages": {
+  }
+}
