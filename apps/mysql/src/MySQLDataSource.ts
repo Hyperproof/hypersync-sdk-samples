@@ -1,6 +1,8 @@
 import {
   CustomAuthCredentials,
   DataObject,
+  DataSetResult,
+  DataSetResultStatus,
   IDataSource,
   Logger
 } from '@hyperproof/hypersync-sdk';
@@ -18,10 +20,12 @@ export class MySQLDataSource implements IDataSource {
 
   async getData<TData = DataObject>(
     dataSetName: string
-  ) {
+  ): Promise<DataSetResult<TData>> {
     Logger.debug(`Getting data: ${dataSetName}`);
 
-    const { host, username, password } = this.credentials as {[key: string]: string};
+    const { host, username, password } = this.credentials as {
+      [key: string]: string;
+    };
     const connection = mysql.createConnection({
       host,
       user: username,
@@ -35,7 +39,7 @@ export class MySQLDataSource implements IDataSource {
       switch (dataSetName) {
         case 'hosts': {
           Logger.info('Retrieving list of hosts.');
-          const data = await new Promise<TData[]>((resolve, reject) => {
+          const data = await new Promise<DataObject[]>((resolve, reject) => {
             connection.query(
               'SELECT DISTINCT host FROM user',
               (error, results) => {
@@ -48,7 +52,11 @@ export class MySQLDataSource implements IDataSource {
             );
           });
 
-          return { data, apiUrl: "" };
+          return {
+            data: data as unknown as TData,
+            apiUrl: '',
+            status: DataSetResultStatus.Complete
+          };
         }
 
         case 'users': {
@@ -66,7 +74,11 @@ export class MySQLDataSource implements IDataSource {
             );
           });
 
-          return { data, apiUrl: ""};
+          return {
+            data: data as unknown as TData,
+            apiUrl: '',
+            status: DataSetResultStatus.Complete
+          };
         }
 
         default:

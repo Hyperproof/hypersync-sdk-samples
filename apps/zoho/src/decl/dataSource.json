@@ -3,7 +3,7 @@
     "currentUser": {
       "description": "Returns information about the authorized user.",
       "documentation": "https://help.zoho.com/portal/en/community/topic/oauth2-current-user",
-      "url": "restapi/portals/",
+      "url": "https://projectsapi.zoho.com/restapi/portals/",
       "transform": {
         "loginId": "login_id"
       },
@@ -12,7 +12,8 @@
     "portals": {
       "description": "Returns a list of all the portals the user has access to.",
       "documentation": "https://www.zoho.com/projects/help/rest-api/portals-api.html#alink1",
-      "url": "restapi/portals/",
+      "url": "https://projectsapi.zoho.com/restapi/portals/",
+      "property": "portals",
       "transform": {
         "id": "$string(id)",
         "name": "name"
@@ -22,7 +23,8 @@
     "projects": {
       "description": "Returns a list of all the projects.",
       "documentation": "https://www.zoho.com/projects/help/rest-api/projects-api.html#alink1",
-      "url": "restapi/portal/{{portal}}/projects/",
+      "url": "https://projectsapi.zoho.com/restapi/portal/{{portal}}/projects/",
+      "property": "projects",
       "result": "array"
     }
   },

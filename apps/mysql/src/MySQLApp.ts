@@ -60,7 +60,9 @@ export class MySQLApp extends HypersyncApp {
   ): Promise<IValidatedUser> {
     try {
       // Connect to the server using the credentials.
-      const { host, username, password } = credentials as {[key:string]: string};
+      const { host, username, password } = credentials as {
+        [key: string]: string;
+      };
 
       const connection = mysql.createConnection({
         host,
