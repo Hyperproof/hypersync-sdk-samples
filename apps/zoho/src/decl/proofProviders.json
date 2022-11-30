@@ -1,4 +1,5 @@
 {
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofProviders.schema.json",
   "projectList": {
     "label": "{{messages.PROOF_TYPE_PROJECT_LIST}}"
   }
