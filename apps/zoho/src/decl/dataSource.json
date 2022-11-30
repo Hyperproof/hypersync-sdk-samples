@@ -1,4 +1,5 @@
 {
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/restDataSource.schema.json",
   "dataSets": {
     "currentUser": {
       "description": "Returns information about the authorized user.",
