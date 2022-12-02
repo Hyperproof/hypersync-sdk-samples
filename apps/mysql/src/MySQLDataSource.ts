@@ -18,9 +18,9 @@ export class MySQLDataSource implements IDataSource {
     this.credentials = credentials;
   }
 
-  async getData<TData = DataObject>(
+  async getData(
     dataSetName: string
-  ): Promise<DataSetResult<TData>> {
+  ): Promise<DataSetResult<DataObject | DataObject[]>> {
     Logger.debug(`Getting data: ${dataSetName}`);
 
     const { host, username, password } = this.credentials as {
@@ -53,7 +53,7 @@ export class MySQLDataSource implements IDataSource {
           });
 
           return {
-            data: data as unknown as TData,
+            data,
             apiUrl: '',
             status: DataSetResultStatus.Complete
           };
@@ -61,7 +61,7 @@ export class MySQLDataSource implements IDataSource {
 
         case 'users': {
           Logger.info('Retrieving list of users.');
-          const data = await new Promise<TData[]>((resolve, reject) => {
+          const data = await new Promise<DataObject[]>((resolve, reject) => {
             connection.query(
               'SELECT DISTINCT * FROM user',
               (error, results) => {
@@ -75,7 +75,7 @@ export class MySQLDataSource implements IDataSource {
           });
 
           return {
-            data: data as unknown as TData,
+            data,
             apiUrl: '',
             status: DataSetResultStatus.Complete
           };
