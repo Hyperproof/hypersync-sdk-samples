@@ -1,0 +1,45 @@
+{
+  "description": "{{messages.PROOF_TYPE_USER_LIST}}",
+  "criteria": [{ "name": "group", "page": 0 }],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_USER_LIST}}",
+    "format": "tabular",
+    "orientation": "landscape",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_USER_LIST}}",
+    "dataSet": "users",
+    "dataSetParams": {
+      "group": "{{criteria.group}}"
+    },
+    "noResultsMessage": "{{messages.NO_USERS}}",
+    "fields": [
+      {
+        "property": "firstName",
+        "label": "{{messages.LABEL_FIRST_NAME}}",
+        "width": "400px",
+        "type": "text"
+      },
+      {
+        "property": "lastName",
+        "label": "{{messages.LABEL_LAST_NAME}}",
+        "width": "400px",
+        "type": "text"
+      },
+      {
+        "property": "email",
+        "label": "{{messages.LABEL_EMAIL_ADDRESS}}",
+        "width": "200px",
+        "type": "text"
+      },
+      {
+        "property": "{{messages.LABEL_STATUS}}",
+        "label": "Status",
+        "width": "200px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://myservice.com/users"
+  }
+}

@@ -3,23 +3,23 @@ import {
   CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
-  Logger,
+  IDataSource,
   IValidatedUser,
-  IDataSource
+  Logger
 } from '@hyperproof/hypersync-sdk';
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
-import mysql from 'mysql';
 import path from 'path';
+import { DataSource } from './DataSource';
 import Messages from './decl/messages.json';
-import { MySQLDataSource } from './MySQLDataSource';
 
-interface IMySQLUser {
+interface IServiceUser {
   username: string;
-  host: string;
+  firstName: string;
+  lastName: string;
 }
 
-export class MySQLApp extends HypersyncApp {
+export class CustomApp extends HypersyncApp {
   constructor() {
     super({
       appRootDir: path.resolve(__dirname, '../'),
@@ -29,11 +29,6 @@ export class MySQLApp extends HypersyncApp {
       credentialsMetadata: {
         instructionHeader: Messages.CREDENTIAL_INSTRUCTION_HEADER,
         fields: [
-          {
-            name: 'host',
-            type: CredentialFieldType.TEXT,
-            label: Messages.LABEL_HOST
-          },
           {
             name: 'username',
             type: CredentialFieldType.TEXT,
@@ -50,7 +45,7 @@ export class MySQLApp extends HypersyncApp {
   }
 
   /**
-   * Validates the Datadog credentials provided by the user.
+   * Validates the credentials provided by the user.
    *
    * Returns a user profile object for the user in the external system.
    *
@@ -60,31 +55,17 @@ export class MySQLApp extends HypersyncApp {
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser> {
     try {
-      // Connect to the server using the credentials.
-      const { host, username, password } = credentials as {
-        [key: string]: string;
-      };
-
-      const connection = mysql.createConnection({
-        host,
-        user: username,
-        password,
-        database: 'mysql'
-      });
-
-      connection.connect();
-      connection.end();
-
-      Logger.debug('MySQL connection successful!');
+      const dataSource = new DataSource(credentials);
+      const getDataresult = await dataSource.getDataObject<IServiceUser>(
+        'currentUser'
+      );
+      const serviceUser = getDataresult.data;
       return {
-        userId: username as string,
-        profile: {
-          username,
-          host
-        }
+        userId: serviceUser.username as string,
+        profile: serviceUser
       };
     } catch (err) {
-      Logger.debug('MySQL credentials validation failed.');
+      Logger.debug('Credential validation failed.');
       Logger.debug(err);
       throw createHttpError(
         StatusCodes.UNAUTHORIZED,
@@ -94,22 +75,26 @@ export class MySQLApp extends HypersyncApp {
   }
 
   /**
-   * Returns a human readable string which identifies the vendor user's account.
+   * Returns a human readable string which uniquely identifies the user's account
+   * in the external system or service.
+   *
    * This string is displayed in Hypersync's Connected Accounts page to help the
    * user distinguish between multiple connections that use different accounts.
    *
    * @param {*} userProfile The profile returned by validateCredentials.
    */
-  public getUserAccountName(userProfile: IMySQLUser) {
-    return `${userProfile.host} ${userProfile.username}`;
+  public getUserAccountName(userProfile: IServiceUser) {
+    return `${userProfile.username} (${userProfile.firstName} ${userProfile.lastName})`;
   }
 
   /**
-   * Creates a data source that uses MySQL credentials for authorization.
+   * Creates a data source that uses custom authentication.
    *
    * @param credentials The set of credentials associated with the connection.
    */
-  public async createDataSource(credentials: CustomAuthCredentials): Promise<IDataSource> {
-    return new MySQLDataSource(credentials);
+  public async createDataSource(
+    credentials: CustomAuthCredentials
+  ): Promise<IDataSource> {
+    return new DataSource(credentials);
   }
 }
