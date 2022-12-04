@@ -1,6 +1,6 @@
 # Custom Authentication Rest Data Source Template
 
-This template can be used to build a custom Hypersync that reads data from a REST API using custom authentication methods such as basic authentication (email and password), API keys, etc.
+This template can be used to build a custom Hypersync that reads data from a REST API using custom authentication methods (e.g. basic authentication, API keys, etc.).
 
 If your target service uses OAuth, or if it does not expose data through a REST API, please use one of the other templates in this repository.
 
@@ -30,4 +30,4 @@ Customizing the template is fairly straightforward.
 
 6. Update the four SVGs with images for your target service.
 
-- For more information on the SVGs see [Icons and Images](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/20-declarative-files-reference.md) in the Hypersync SDK documentaiton.
+- For more information on the SVGs see [Icons and Images](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/11-svg-images.md) in the Hypersync SDK documentaiton.
