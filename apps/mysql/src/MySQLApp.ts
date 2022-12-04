@@ -4,7 +4,8 @@ import {
   CustomAuthCredentials,
   HypersyncApp,
   Logger,
-  IValidatedUser
+  IValidatedUser,
+  IDataSource
 } from '@hyperproof/hypersync-sdk';
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
@@ -104,11 +105,11 @@ export class MySQLApp extends HypersyncApp {
   }
 
   /**
-   * Creates a data source that uses Datadog service keys for authorization.
+   * Creates a data source that uses MySQL credentials for authorization.
    *
    * @param credentials The set of credentials associated with the connection.
    */
-  public async createDataSource(credentials: CustomAuthCredentials) {
+  public async createDataSource(credentials: CustomAuthCredentials): Promise<IDataSource> {
     return new MySQLDataSource(credentials);
   }
 }

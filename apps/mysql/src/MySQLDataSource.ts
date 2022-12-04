@@ -9,7 +9,7 @@ import {
 import mysql from 'mysql';
 
 /**
- * Custom ServiceClient for the MySQL Hypersync.
+ * Custom Data Source for the MySQL Hypersync.
  */
 export class MySQLDataSource implements IDataSource {
   private credentials: CustomAuthCredentials;
