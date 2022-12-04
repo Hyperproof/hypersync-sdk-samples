@@ -1,5 +1,5 @@
 {
-  "CONNECTOR_NAME": "MyService",
+  "CONNECTOR_NAME": "THE_SERVICE",
   "CREDENTIAL_INSTRUCTION_HEADER": "Please specify your username and password.",
   "ERROR_INVALID_CREDENTIALS": "Invalid username or password.",
   "LABEL_ALL_GROUPS": "All Groups",

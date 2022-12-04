@@ -16,7 +16,7 @@ Customizing the template is fairly straightforward.
 
 - Properties that need to be updated have `todo` or `TODO` in the value.
 - Make sure to choose a good value for the package name. The Hyperproof CLI uses this value as an identifier.
-- For more information on updating these values see [package.json Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/10-pacakge-json-reference.md) in the Hypersync SDK documentation.
+- For more information on updating these values see [package.json Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/10-package-json-reference.md) in the Hypersync SDK documentation.
 
 3. Open `CustomApp.ts` and search for `TODO`.
 
