@@ -2,7 +2,9 @@ import {
   AuthorizationType,
   CredentialFieldType,
   CustomAuthCredentials,
+  DataObject,
   HypersyncApp,
+  IDataSetResultComplete,
   IDataSource,
   IValidatedUser,
   Logger
@@ -54,10 +56,10 @@ export class CustomApp extends HypersyncApp {
   ): Promise<IValidatedUser> {
     try {
       const dataSource = new DataSource(credentials);
-      const getDataresult = await dataSource.getDataObject<IServiceUser>(
-        'currentUser'
-      );
-      const serviceUser = getDataresult.data;
+      // TODO: Clean this up when HYP-29105 is fixed.
+      const getDataresult = await dataSource.getData('currentUser');
+      const serviceUser = (getDataresult as IDataSetResultComplete<DataObject>)
+        .data;
       return {
         userId: serviceUser.username as string,
         profile: serviceUser

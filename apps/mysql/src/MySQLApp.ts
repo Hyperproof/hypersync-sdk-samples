@@ -3,9 +3,9 @@ import {
   CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
-  Logger,
+  IDataSource,
   IValidatedUser,
-  IDataSource
+  Logger
 } from '@hyperproof/hypersync-sdk';
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
@@ -50,11 +50,11 @@ export class MySQLApp extends HypersyncApp {
   }
 
   /**
-   * Validates the Datadog credentials provided by the user.
+   * Validates the credentials provided by the user.
    *
    * Returns a user profile object for the user in the external system.
    *
-   * @param {CustomAuthCredentails} credentials Login credentials provided by the user.
+   * @param credentials Login credentials provided by the user.
    */
   public async validateCredentials(
     credentials: CustomAuthCredentials
@@ -94,11 +94,11 @@ export class MySQLApp extends HypersyncApp {
   }
 
   /**
-   * Returns a human readable string which identifies the vendor user's account.
+   * Returns a human readable string which identifies the user's account.
    * This string is displayed in Hypersync's Connected Accounts page to help the
    * user distinguish between multiple connections that use different accounts.
    *
-   * @param {*} userProfile The profile returned by validateCredentials.
+   * @param userProfile The profile returned by validateCredentials.
    */
   public getUserAccountName(userProfile: IMySQLUser) {
     return `${userProfile.host} ${userProfile.username}`;
@@ -109,7 +109,9 @@ export class MySQLApp extends HypersyncApp {
    *
    * @param credentials The set of credentials associated with the connection.
    */
-  public async createDataSource(credentials: CustomAuthCredentials): Promise<IDataSource> {
+  public async createDataSource(
+    credentials: CustomAuthCredentials
+  ): Promise<IDataSource> {
     return new MySQLDataSource(credentials);
   }
 }
