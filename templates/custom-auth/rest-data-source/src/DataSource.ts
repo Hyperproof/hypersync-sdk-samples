@@ -14,7 +14,7 @@ import config from './decl/dataSource.json';
 // method on RestDataSource to properly handle that paging.
 
 /**
- * Custom data source for the Zoho Hypersync app.
+ * Custom data source for the THE_SERVICE Hypersync app.
  */
 export class DataSource extends RestDataSource {
   constructor(credentials: CustomAuthCredentials) {

@@ -34,8 +34,8 @@
         "type": "text"
       },
       {
-        "property": "{{messages.LABEL_STATUS}}",
-        "label": "Status",
+        "property": "status",
+        "label": "{{messages.LABEL_STATUS}}",
         "width": "200px",
         "type": "text"
       }

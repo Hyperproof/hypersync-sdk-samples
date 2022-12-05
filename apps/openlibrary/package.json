@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
-  "name": "todo-your-package-name",
+  "name": "open-library",
   "app_hyperproof": {
-    "name": "TODO: App Name in Hyperproof",
+    "name": "Open Library",
     "appType": "hypersync",
     "authType": "custom",
-    "category": "TODO: Your app's cateogry (e.g. Identity Services)",
-    "descriptionCapabilities": "TODO: This integration extracts users and group information from the THE_SERVICE service",
-    "descriptionConnected": "TODO: The MY_HYPERSYNC_APP_NAME integration automatically imports proof to your controls and labels",
-    "writeScope": "TODO: Update Hyperproof with settings collected from the THE_SERVICE service",
+    "category": "Reference Materials",
+    "descriptionCapabilities": "This integration extracts book and author information from the Open Library service",
+    "descriptionConnected": "The Open Library integration automatically imports proof to your controls and labels",
+    "writeScope": "Update Hyperproof with book and author infomration collected from the Open Library service",
     "debug": true,
     "staticIp": false
   },
