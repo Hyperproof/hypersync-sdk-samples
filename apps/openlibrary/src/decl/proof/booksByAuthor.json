@@ -1,0 +1,48 @@
+{
+  "description": "{{messages.PROOF_TYPE_BOOKS_BY_AUTHOR}}",
+  "criteria": [
+    { "name": "authorSearch", "page": 0 },
+    { "name": "author", "page": 0 }
+  ],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_BOOKS_BY_AUTHOR}}",
+    "format": "tabular",
+    "orientation": "portrait",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_BOOKS_BY_AUTHOR}}",
+    "dataSet": "booksByAuthor",
+    "dataSetParams": {
+      "author": "{{criteria.author}}"
+    },
+    "noResultsMessage": "{{messages.NO_BOOKS}}",
+    "fields": [
+      {
+        "property": "key",
+        "label": "{{messages.LABEL_KEY}}",
+        "width": "200px",
+        "type": "text"
+      },
+      {
+        "property": "title",
+        "label": "{{messages.LABEL_TITLE}}",
+        "width": "300px",
+        "type": "text"
+      },
+      {
+        "property": "created",
+        "label": "{{messages.LABEL_CREATED}}",
+        "width": "100px",
+        "type": "text"
+      },
+      {
+        "property": "updated",
+        "label": "{{messages.LABEL_UPDATED}}",
+        "width": "100px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://openlibrary.org/search/authors?q={{criteria.authorSearch}}&mode=everything"
+  }
+}

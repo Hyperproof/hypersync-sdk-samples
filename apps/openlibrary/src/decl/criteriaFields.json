@@ -1,0 +1,22 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/criteriaFields.schema.json",
+  "authorSearch": {
+    "type": "text",
+    "property": "authorSearch",
+    "label": "{{messages.LABEL_AUTHOR_SEARCH}}",
+    "placeholder": "{{messages.PLACEHOLDER_AUTHOR_SEARCH}}",
+    "isRequired": true
+  },
+  "author": {
+    "type": "select",
+    "property": "author",
+    "label": "{{messages.LABEL_AUTHOR}}",
+    "dataSet": "authors",
+    "dataSetParams": {
+      "authorSearch": "{{criteria.authorSearch}}"
+    },
+    "valueProperty": "key",
+    "labelProperty": "name",
+    "isRequired": true
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofProviders.schema.json",
+  "booksByAuthor": {
+    "label": "{{messages.PROOF_TYPE_BOOKS_BY_AUTHOR}}"
+  }
+}

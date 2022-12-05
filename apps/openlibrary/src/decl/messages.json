@@ -1,0 +1,15 @@
+{
+  "CONNECTOR_NAME": "Open Library",
+  "CREDENTIAL_INSTRUCTION_BODY": "Please click Next.",
+  "CREDENTIAL_INSTRUCTION_HEADER": "The Open Library API is public and does not require authentication.",
+  "ERROR_INVALID_CREDENTIALS": "Invalid username or password.",
+  "LABEL_AUTHOR": "Author",
+  "LABEL_AUTHOR_SEARCH": "Search by Author Name",
+  "LABEL_CREATED": "Created On",
+  "LABEL_KEY": "Key",
+  "LABEL_TITLE": "Title",
+  "LABEL_UPDATED": "Updated On",
+  "NO_BOOK": "No books found.",
+  "PLACEHOLDER_AUTHOR_SEARCH": "Mark Twain",
+  "PROOF_TYPE_BOOKS_BY_AUTHOR": "Books by Author"
+}
