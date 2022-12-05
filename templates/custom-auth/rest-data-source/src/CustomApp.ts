@@ -47,9 +47,7 @@ export class CustomApp extends HypersyncApp {
   /**
    * Validates the credentials provided by the user.
    *
-   * Returns a user profile object for the user in the external system.
-   *
-   * @param {CustomAuthCredentails} credentials Login credentials provided by the user.
+   * @param credentials Login credentials provided by the user.
    */
   public async validateCredentials(
     credentials: CustomAuthCredentials
@@ -81,7 +79,7 @@ export class CustomApp extends HypersyncApp {
    * This string is displayed in Hypersync's Connected Accounts page to help the
    * user distinguish between multiple connections that use different accounts.
    *
-   * @param {*} userProfile The profile returned by validateCredentials.
+   * @param userProfile The profile returned by validateCredentials.
    */
   public getUserAccountName(userProfile: IServiceUser) {
     return `${userProfile.username} (${userProfile.firstName} ${userProfile.lastName})`;
