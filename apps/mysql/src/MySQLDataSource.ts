@@ -54,7 +54,7 @@ export class MySQLDataSource implements IDataSource {
 
           return {
             data,
-            apiUrl: '',
+            source: '',
             status: DataSetResultStatus.Complete
           };
         }
@@ -76,7 +76,7 @@ export class MySQLDataSource implements IDataSource {
 
           return {
             data,
-            apiUrl: '',
+            source: '',
             status: DataSetResultStatus.Complete
           };
         }

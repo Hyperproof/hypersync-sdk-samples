@@ -1,6 +1,6 @@
 import {
   CustomAuthCredentials,
-  IDataSourceConfig,
+  IRestDataSourceConfig,
   RestDataSource
 } from '@hyperproof/hypersync-sdk';
 import Messages from './decl/messages.json';
@@ -23,7 +23,7 @@ export class DataSource extends RestDataSource {
 
     // TODO: Update the code below to send authorization
     // information as the service expects.
-    super(config as IDataSourceConfig, Messages, {
+    super(config as IRestDataSourceConfig, Messages, {
       'Content-Type': 'application/json',
       Authorization: `Basic ${buffer.toString('base64')}`
     });
