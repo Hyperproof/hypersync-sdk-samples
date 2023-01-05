@@ -4,7 +4,6 @@ import {
   IDataSource,
   IValidatedUser
 } from '@hyperproof/hypersync-sdk';
-import path from 'path';
 import { DataSource } from './DataSource';
 import Messages from './decl/messages.json';
 
@@ -15,7 +14,7 @@ interface IServiceUser {
 export class OpenLibraryApp extends HypersyncApp {
   constructor() {
     super({
-      appRootDir: path.resolve(__dirname, '../'),
+      appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages,
       credentialsMetadata: {

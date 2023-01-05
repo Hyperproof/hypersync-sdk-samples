@@ -3,7 +3,6 @@ import {
   IDataSource,
   OAuthTokenResponse
 } from '@hyperproof/hypersync-sdk';
-import path from 'path';
 import Messages from './decl/messages.json';
 import { ZohoDataSource } from './ZohoDataSource';
 
@@ -14,7 +13,7 @@ interface IZohoUserProfile {
 export class ZohoApp extends HypersyncApp {
   constructor() {
     super({
-      appRootDir: path.resolve(__dirname, '../'),
+      appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages
     });
