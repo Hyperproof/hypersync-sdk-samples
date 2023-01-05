@@ -1,5 +1,4 @@
 import {
-  AuthorizationType,
   CustomAuthCredentials,
   HypersyncApp,
   IDataSource,
@@ -19,7 +18,6 @@ export class OpenLibraryApp extends HypersyncApp {
       appRootDir: path.resolve(__dirname, '../'),
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages,
-      authorizationType: AuthorizationType.CUSTOM,
       credentialsMetadata: {
         instructionHeader: Messages.CREDENTIAL_INSTRUCTION_HEADER,
         instructionBody: Messages.CREDENTIAL_INSTRUCTION_BODY,
@@ -36,6 +34,7 @@ export class OpenLibraryApp extends HypersyncApp {
    * @param credentials Login credentials provided by the user.
    */
   public async validateCredentials(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser<IServiceUser>> {
     // The Open Library API is public and does not require authentication.
@@ -56,6 +55,7 @@ export class OpenLibraryApp extends HypersyncApp {
    *
    * @param {*} userProfile The profile returned by validateCredentials.
    */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public getUserAccountName(userProfile: IServiceUser) {
     return `Anyonymous User`;
   }

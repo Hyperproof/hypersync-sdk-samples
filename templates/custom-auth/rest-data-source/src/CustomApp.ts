@@ -1,5 +1,4 @@
 import {
-  AuthorizationType,
   CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
@@ -25,7 +24,6 @@ export class CustomApp extends HypersyncApp {
       appRootDir: path.resolve(__dirname, '../'),
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages,
-      authorizationType: AuthorizationType.CUSTOM,
       credentialsMetadata: {
         instructionHeader: Messages.CREDENTIAL_INSTRUCTION_HEADER,
         fields: [
