@@ -1,5 +1,4 @@
 import {
-  AuthorizationType,
   CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
@@ -10,7 +9,6 @@ import {
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
 import mysql from 'mysql';
-import path from 'path';
 import Messages from './decl/messages.json';
 import { MySQLDataSource } from './MySQLDataSource';
 
@@ -22,10 +20,9 @@ interface IMySQLUser {
 export class MySQLApp extends HypersyncApp {
   constructor() {
     super({
-      appRootDir: path.resolve(__dirname, '../'),
+      appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages,
-      authorizationType: AuthorizationType.CUSTOM,
       credentialsMetadata: {
         instructionHeader: Messages.CREDENTIAL_INSTRUCTION_HEADER,
         fields: [

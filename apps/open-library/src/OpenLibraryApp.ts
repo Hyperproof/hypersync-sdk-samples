@@ -1,11 +1,9 @@
 import {
-  AuthorizationType,
   CustomAuthCredentials,
   HypersyncApp,
   IDataSource,
   IValidatedUser
 } from '@hyperproof/hypersync-sdk';
-import path from 'path';
 import { DataSource } from './DataSource';
 import Messages from './decl/messages.json';
 
@@ -16,10 +14,9 @@ interface IServiceUser {
 export class OpenLibraryApp extends HypersyncApp {
   constructor() {
     super({
-      appRootDir: path.resolve(__dirname, '../'),
+      appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages,
-      authorizationType: AuthorizationType.CUSTOM,
       credentialsMetadata: {
         instructionHeader: Messages.CREDENTIAL_INSTRUCTION_HEADER,
         instructionBody: Messages.CREDENTIAL_INSTRUCTION_BODY,
@@ -36,6 +33,7 @@ export class OpenLibraryApp extends HypersyncApp {
    * @param credentials Login credentials provided by the user.
    */
   public async validateCredentials(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser<IServiceUser>> {
     // The Open Library API is public and does not require authentication.
@@ -56,6 +54,7 @@ export class OpenLibraryApp extends HypersyncApp {
    *
    * @param {*} userProfile The profile returned by validateCredentials.
    */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public getUserAccountName(userProfile: IServiceUser) {
     return `Anyonymous User`;
   }

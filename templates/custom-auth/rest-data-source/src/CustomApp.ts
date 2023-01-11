@@ -1,5 +1,4 @@
 import {
-  AuthorizationType,
   CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
@@ -9,7 +8,6 @@ import {
 } from '@hyperproof/hypersync-sdk';
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
-import path from 'path';
 import { DataSource } from './DataSource';
 import Messages from './decl/messages.json';
 
@@ -22,10 +20,9 @@ interface IServiceUser {
 export class CustomApp extends HypersyncApp {
   constructor() {
     super({
-      appRootDir: path.resolve(__dirname, '../'),
+      appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
       messages: Messages,
-      authorizationType: AuthorizationType.CUSTOM,
       credentialsMetadata: {
         instructionHeader: Messages.CREDENTIAL_INSTRUCTION_HEADER,
         fields: [

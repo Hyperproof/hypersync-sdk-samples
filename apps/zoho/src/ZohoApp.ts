@@ -1,24 +1,21 @@
 import {
-  AuthorizationType,
   HypersyncApp,
   IDataSource,
-  OAuthTokenResponse,
+  OAuthTokenResponse
 } from '@hyperproof/hypersync-sdk';
-import path from 'path';
 import Messages from './decl/messages.json';
 import { ZohoDataSource } from './ZohoDataSource';
 
 interface IZohoUserProfile {
-  loginId: string
+  loginId: string;
 }
 
 export class ZohoApp extends HypersyncApp {
   constructor() {
     super({
-      appRootDir: path.resolve(__dirname, '../'),
+      appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
-      messages: Messages,
-      authorizationType: AuthorizationType.OAUTH,
+      messages: Messages
     });
   }
 
@@ -27,10 +24,9 @@ export class ZohoApp extends HypersyncApp {
    *
    * @param tokenContext An object representing the result of the getAccessToken call.
    */
-   async getUserProfile(tokenContext: OAuthTokenResponse) {
-    // 
+  async getUserProfile(tokenContext: OAuthTokenResponse) {
     const dataSource = new ZohoDataSource(tokenContext.access_token);
-    const userInfo = await dataSource.getDataObject("currentUser");
+    const userInfo = await dataSource.getDataObject('currentUser');
     const userProfile: IZohoUserProfile = {
       loginId: userInfo.data.loginId as string
     };
@@ -54,9 +50,11 @@ export class ZohoApp extends HypersyncApp {
    * @param userProfile The profile of the user returned by getUserProfile.
    */
   public getUserAccountName(userProfile: IZohoUserProfile) {
-    return Messages.USER_ACCOUNT_TEMPLATE.replace("{{loginId}}", userProfile.loginId);
+    return Messages.USER_ACCOUNT_TEMPLATE.replace(
+      '{{loginId}}',
+      userProfile.loginId
+    );
   }
-
 
   /**
    * Creates a data source that uses OAuth authorization.
