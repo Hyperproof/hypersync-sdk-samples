@@ -14,14 +14,13 @@ import mysql from 'mysql';
 export class MySQLDataSource implements IDataSource {
   private credentials: CustomAuthCredentials;
   constructor(credentials: CustomAuthCredentials) {
-    Logger.debug(`Constructing MySQLDatasource`);
     this.credentials = credentials;
   }
 
   async getData(
     dataSetName: string
   ): Promise<DataSetResult<DataObject | DataObject[]>> {
-    Logger.debug(`Getting data: ${dataSetName}`);
+    await Logger.debug(`Getting data: ${dataSetName}`);
 
     const { host, username, password } = this.credentials as {
       [key: string]: string;
@@ -38,7 +37,7 @@ export class MySQLDataSource implements IDataSource {
     try {
       switch (dataSetName) {
         case 'hosts': {
-          Logger.info('Retrieving list of hosts.');
+          await Logger.info('Retrieving list of hosts.');
           const data = await new Promise<DataObject[]>((resolve, reject) => {
             connection.query(
               'SELECT DISTINCT host FROM user',
@@ -46,7 +45,6 @@ export class MySQLDataSource implements IDataSource {
                 if (error) {
                   reject(error);
                 }
-                Logger.info(JSON.stringify(results));
                 resolve(results);
               }
             );
@@ -60,7 +58,7 @@ export class MySQLDataSource implements IDataSource {
         }
 
         case 'users': {
-          Logger.info('Retrieving list of users.');
+          await Logger.info('Retrieving list of users.');
           const data = await new Promise<DataObject[]>((resolve, reject) => {
             connection.query(
               'SELECT DISTINCT * FROM user',
@@ -68,7 +66,6 @@ export class MySQLDataSource implements IDataSource {
                 if (error) {
                   reject(error);
                 }
-                Logger.info(JSON.stringify(results));
                 resolve(results);
               }
             );
