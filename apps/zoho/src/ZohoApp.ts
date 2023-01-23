@@ -1,6 +1,7 @@
 import {
   HypersyncApp,
   IDataSource,
+  Logger,
   OAuthTokenResponse
 } from '@hyperproof/hypersync-sdk';
 import Messages from './decl/messages.json';
@@ -25,6 +26,7 @@ export class ZohoApp extends HypersyncApp {
    * @param tokenContext An object representing the result of the getAccessToken call.
    */
   async getUserProfile(tokenContext: OAuthTokenResponse) {
+    await Logger.debug('Getting Zoho user profile.');
     const dataSource = new ZohoDataSource(tokenContext.access_token);
     const userInfo = await dataSource.getDataObject('currentUser');
     const userProfile: IZohoUserProfile = {
@@ -39,6 +41,7 @@ export class ZohoApp extends HypersyncApp {
    * @param userProfile The profile of the user returned by getUserProfile.
    */
   public async getUserId(userProfile: IZohoUserProfile) {
+    await Logger.debug('Getting Zoho user ID.');
     return userProfile.loginId;
   }
 
@@ -62,6 +65,7 @@ export class ZohoApp extends HypersyncApp {
    * @param accessToken The OAuth access token for the service.
    */
   public async createDataSource(accessToken: string): Promise<IDataSource> {
+    await Logger.debug('Creating data source.');
     return new ZohoDataSource(accessToken);
   }
 }

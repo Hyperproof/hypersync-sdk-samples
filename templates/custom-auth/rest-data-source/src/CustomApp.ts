@@ -49,6 +49,7 @@ export class CustomApp extends HypersyncApp {
   public async validateCredentials(
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser> {
+    await Logger.debug('Validating credentails.');
     try {
       const dataSource = new DataSource(credentials);
       const getDataresult = await dataSource.getDataObject<IServiceUser>(
@@ -60,8 +61,8 @@ export class CustomApp extends HypersyncApp {
         profile: serviceUser
       };
     } catch (err) {
-      Logger.debug('Credential validation failed.');
-      Logger.debug(err);
+      await Logger.debug('Credential validation failed.');
+      await Logger.debug(err);
       throw createHttpError(
         StatusCodes.UNAUTHORIZED,
         Messages.ERROR_INVALID_CREDENTIALS
@@ -90,6 +91,7 @@ export class CustomApp extends HypersyncApp {
   public async createDataSource(
     credentials: CustomAuthCredentials
   ): Promise<IDataSource> {
+    await Logger.debug('Creating data source.');
     return new DataSource(credentials);
   }
 }
