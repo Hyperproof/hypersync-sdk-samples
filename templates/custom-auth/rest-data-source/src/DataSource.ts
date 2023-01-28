@@ -1,10 +1,10 @@
 import {
   CustomAuthCredentials,
   IRestDataSourceConfig,
-  RestDataSource
+  RestDataSourceBase
 } from '@hyperproof/hypersync-sdk';
-import Messages from './decl/messages.json';
-import config from './decl/dataSource.json';
+import Messages from './json/messages.json';
+import config from './json/dataSource.json';
 
 // TODO: Configure the data sets that your app needs by editing
 // ./decl/dataSource.json.  Data sets configured in that file will
@@ -16,7 +16,7 @@ import config from './decl/dataSource.json';
 /**
  * Custom data source for the THE_SERVICE Hypersync app.
  */
-export class DataSource extends RestDataSource {
+export class DataSource extends RestDataSourceBase {
   constructor(credentials: CustomAuthCredentials) {
     const { username, password } = credentials;
     const buffer = Buffer.from(`${username}:${password}`);
