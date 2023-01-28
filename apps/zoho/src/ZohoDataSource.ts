@@ -1,14 +1,14 @@
 import {
   IRestDataSourceConfig,
-  RestDataSource
+  RestDataSourceBase
 } from '@hyperproof/hypersync-sdk';
-import Messages from './decl/messages.json';
-import config from './decl/dataSource.json';
+import Messages from './json/messages.json';
+import config from './json/dataSource.json';
 
 /**
  * Custom data source for the Zoho Hypersync app.
  */
-export class ZohoDataSource extends RestDataSource {
+export class ZohoDataSource extends RestDataSourceBase {
   constructor(accessToken: string) {
     super(config as IRestDataSourceConfig, Messages, {
       Authorization: `Bearer ${accessToken}`,
