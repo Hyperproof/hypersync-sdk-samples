@@ -9,7 +9,7 @@ import {
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
 import mysql from 'mysql';
-import Messages from './decl/messages.json';
+import Messages from './json/messages.json';
 import { MySQLDataSource } from './MySQLDataSource';
 
 interface IMySQLUser {

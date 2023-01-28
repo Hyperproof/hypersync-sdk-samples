@@ -4,7 +4,7 @@ import {
   Logger,
   OAuthTokenResponse
 } from '@hyperproof/hypersync-sdk';
-import Messages from './decl/messages.json';
+import Messages from './json/messages.json';
 import { ZohoDataSource } from './ZohoDataSource';
 
 interface IZohoUserProfile {

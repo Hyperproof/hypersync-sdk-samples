@@ -6,7 +6,7 @@ import {
   Logger
 } from '@hyperproof/hypersync-sdk';
 import { DataSource } from './DataSource';
-import Messages from './decl/messages.json';
+import Messages from './json/messages.json';
 
 interface IServiceUser {
   username: string;

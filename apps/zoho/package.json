@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "@hyperproof-sdk/zoho-hypersync",
+  "name": "zoho-hs",
   "app_hyperproof": {
     "name": "Zoho",
     "appType": "hypersync",
@@ -11,14 +11,14 @@
   },
   "scripts": {
     "build": "npm run lint && tsc && npm run copydecl",
-    "copydecl": "rimraf ./build/decl && copyfiles -u 2 ./src/decl/*.json ./src/decl/proof/*.json ./build/decl",
+    "copydecl": "rimraf ./build/json && copyfiles -u 2 ./src/json/*.json ./src/json/proof/*.json ./build/json",
     "lint": "node ./node_modules/eslint/bin/eslint.js src/**/*.ts"
   },
   "engines": {
     "node": "16"
   },
   "dependencies": {
-    "@hyperproof/hypersync-sdk": "^0.9.0",
+    "@hyperproof/hypersync-sdk": "^0.9.1",
     "http-errors": "1.8.0",
     "http-status-codes": "2.1.4",
     "mysql": "2.18.1",

@@ -16,7 +16,7 @@ Customizing the template is fairly straightforward.
 
 - Properties that need to be updated have `todo` or `TODO` in the value.
 - Make sure to choose a good value for the package name. The Hyperproof CLI uses this value as an identifier.
-- For more information on updating these values see [package.json Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/10-package-json-reference.md) in the Hypersync SDK documentation.
+- For more information on updating these values see [package.json Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/030-package-json-reference.md) in the Hypersync SDK documentation.
 
 3. Open `CustomApp.ts` and search for `TODO`.
 
@@ -24,9 +24,9 @@ Customizing the template is fairly straightforward.
 
 4. Next, open `DataSource.ts` and search for `TODO` comments there.
 
-5. Update the declarative files under `/decl` to fit your service.
+5. Update the declarative files under `/json` to fit your service.
 
-- For more information on the files under `/decl` see [Declarative Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/20-declarative-files-reference.md) in the Hypersync SDK documentation.
+- For more information on the files under `/json` see [Declarative Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
 
 6. Update the four SVGs with images for your target service.
 
