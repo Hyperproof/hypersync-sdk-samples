@@ -1,8 +1,8 @@
-# Custom Authentication Rest Data Source Template
+# OAuth Rest Data Source Template
 
-This template can be used to build a custom Hypersync that reads data from a REST API using custom authentication methods (e.g. basic authentication, API keys, etc.).
+This template can be used to build a custom Hypersync that reads data from a REST API using OAuth authorization.
 
-If your target service uses OAuth, or if it does not expose data through a REST API, please use one of the other templates in this repository.
+If your target service uses some other form of authentiation, or if it exposes data via a REST API, please use one of the other templates in this repository.
 
 ## Customizing the Template
 
@@ -26,8 +26,10 @@ Customizing the template is fairly straightforward.
 
 5. Update the declarative files under `/src/json` to fit your service.
 
-- For more information on the files under `/src/json` see [JSON Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
+- For more information on the files under `/src/json` see [Declarative Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
 
-6. Update the four SVGs with images for your target service.
+6. Copy `/.env.template` to `/.env` and update the values in that file for your OAuth service.
+
+7. Update the four SVGs with images for your target service.
 
 - For more information on the SVGs see [Icons and Images](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/11-svg-images.md) in the Hypersync SDK documentaiton.

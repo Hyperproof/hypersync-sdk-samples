@@ -1,0 +1,47 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/restDataSource.schema.json",
+  "baseUrl": "https://THE_SERVICE.com/api/v2",
+  "dataSets": {
+    "currentUser": {
+      "description": "Returns information about the authorized user.",
+      "documentation": "https://THE_SERVICE.com/docs/api/users/me",
+      "url": "users/me",
+      "transform": {
+        "username": "username",
+        "firstName": "givenName",
+        "lastName": "surname"
+      },
+      "result": "object"
+    },
+    "groups": {
+      "description": "Returns a list of all the groups in My Service.",
+      "documentation": "https://THE_SERVICE.com/docs/api/groups",
+      "url": "groups",
+      "transform": {
+        "id": "id",
+        "groupName": "groupName",
+        "members": "memberCount"
+      },
+      "result": "array"
+    },
+    "users": {
+      "description": "Returns a list of all the users in My Service.",
+      "documentation": "https://THE_SERVICE.com/docs/api/users",
+      "url": "users",
+      "transform": {
+        "id": "id",
+        "firstName": "givenName",
+        "lastName": "surname",
+        "email": "emailAddress",
+        "status": "$mlookup('statuses', status)"
+      },
+      "result": "array"
+    }
+  },
+  "messages": {
+    "statuses": {
+      "active": "Active",
+      "deactivated": "Inactive"
+    }
+  }
+}
