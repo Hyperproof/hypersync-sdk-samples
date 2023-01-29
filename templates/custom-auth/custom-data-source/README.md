@@ -26,7 +26,7 @@ Customizing the template is fairly straightforward.
 
 5. Update the declarative files under `/src/json` to fit your service.
 
-- For more information on the files under `/json` see [JSON Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
+- For more information on the files under `/src/json` see [JSON Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
 
 6. Update the four SVGs with images for your target service.
 

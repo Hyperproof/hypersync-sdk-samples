@@ -1,10 +1,9 @@
 import {
-  CustomAuthCredentials,
   IRestDataSourceConfig,
-  RestDataSourceBase,
-} from "@hyperproof/hypersync-sdk";
-import Messages from "./json/messages.json";
-import config from "./json/dataSource.json";
+  RestDataSourceBase
+} from '@hyperproof/hypersync-sdk';
+import Messages from './json/messages.json';
+import config from './json/dataSource.json';
 
 // TODO: Configure the data sets that your app needs by editing
 // ./json/dataSource.json.  Data sets configured in that file will
@@ -21,8 +20,8 @@ export class DataSource extends RestDataSourceBase {
     // TODO: Update the code below to send authorization
     // information as the service expects.
     super(config as IRestDataSourceConfig, Messages, {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${accessToken}`
     });
   }
 }
