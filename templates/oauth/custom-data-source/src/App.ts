@@ -2,10 +2,10 @@ import {
   HypersyncApp,
   IDataSource,
   Logger,
-  OAuthTokenResponse,
-} from "@hyperproof/hypersync-sdk";
-import { DataSource } from "./DataSource";
-import Messages from "./json/messages.json";
+  OAuthTokenResponse
+} from '@hyperproof/hypersync-sdk';
+import { DataSource } from './DataSource';
+import Messages from './json/messages.json';
 
 interface IServiceUser {
   userId: string;
@@ -13,12 +13,12 @@ interface IServiceUser {
   lastName: string;
 }
 
-export class CustomApp extends HypersyncApp {
+export class App extends HypersyncApp {
   constructor() {
     super({
       appRootDir: __dirname,
       connectorName: Messages.CONNECTOR_NAME,
-      messages: Messages,
+      messages: Messages
     });
   }
 
@@ -28,10 +28,10 @@ export class CustomApp extends HypersyncApp {
    * @param tokenContext An object representing the result of the getAccessToken call.
    */
   async getUserProfile(tokenContext: OAuthTokenResponse) {
-    await Logger.debug("Getting user profile.");
+    await Logger.debug('Getting user profile.');
     const dataSource = new DataSource(tokenContext.access_token);
     const userInfo = await dataSource.getDataObject<IServiceUser>(
-      "currentUser"
+      'currentUser'
     );
     return userInfo.data;
   }
@@ -42,7 +42,7 @@ export class CustomApp extends HypersyncApp {
    * @param userProfile The profile of the user returned by getUserProfile.
    */
   public async getUserId(userProfile: IServiceUser) {
-    await Logger.debug("Getting user ID.");
+    await Logger.debug('Getting user ID.');
     return userProfile.userId;
   }
 
@@ -65,7 +65,7 @@ export class CustomApp extends HypersyncApp {
    * @param accessToken The OAuth access token.
    */
   public async createDataSource(accessToken: string): Promise<IDataSource> {
-    await Logger.debug("Creating data source.");
+    await Logger.debug('Creating data source.');
     return new DataSource(accessToken);
   }
 }

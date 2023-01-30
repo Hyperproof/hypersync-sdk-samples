@@ -1,3 +1,3 @@
-const { CustomApp } = require("./build/CustomApp");
-const app = new CustomApp();
+const { App } = require('./build/App');
+const app = new App();
 module.exports = app.initialize();

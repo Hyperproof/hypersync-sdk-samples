@@ -18,7 +18,7 @@ Customizing the template is fairly straightforward.
 - Make sure to choose a good value for the package name. The Hyperproof CLI uses this value as an identifier.
 - For more information on updating these values see [package.json Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/030-package-json-reference.md) in the Hypersync SDK documentation.
 
-3. Open `/src/CustomApp.ts` and search for `TODO`.
+3. Open `/src/App.ts` and search for `TODO`.
 
 - You will find comments in the file that explain how to customize the app file for your needs.
 

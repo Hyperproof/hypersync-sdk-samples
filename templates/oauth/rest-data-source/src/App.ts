@@ -13,7 +13,7 @@ interface IServiceUser {
   lastName: string;
 }
 
-export class CustomApp extends HypersyncApp {
+export class App extends HypersyncApp {
   constructor() {
     super({
       appRootDir: __dirname,
