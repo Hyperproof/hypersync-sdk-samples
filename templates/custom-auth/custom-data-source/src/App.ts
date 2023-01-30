@@ -1,9 +1,7 @@
 import {
   CredentialFieldType,
   CustomAuthCredentials,
-  DataObject,
   HypersyncApp,
-  IDataSetResultComplete,
   IDataSource,
   IValidatedUser,
   Logger
@@ -19,7 +17,7 @@ interface IServiceUser {
   lastName: string;
 }
 
-export class CustomApp extends HypersyncApp {
+export class App extends HypersyncApp {
   constructor() {
     super({
       appRootDir: __dirname,
@@ -55,9 +53,10 @@ export class CustomApp extends HypersyncApp {
     try {
       const dataSource = new DataSource(credentials);
       // TODO: Clean this up when HYP-29105 is fixed.
-      const getDataresult = await dataSource.getData('currentUser');
-      const serviceUser = (getDataresult as IDataSetResultComplete<DataObject>)
-        .data;
+      const result = await dataSource.getDataObject<IServiceUser>(
+        'currentUser'
+      );
+      const serviceUser = result.data;
       return {
         userId: serviceUser.username as string,
         profile: serviceUser

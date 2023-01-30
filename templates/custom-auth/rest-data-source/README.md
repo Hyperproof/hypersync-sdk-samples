@@ -18,15 +18,15 @@ Customizing the template is fairly straightforward.
 - Make sure to choose a good value for the package name. The Hyperproof CLI uses this value as an identifier.
 - For more information on updating these values see [package.json Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/030-package-json-reference.md) in the Hypersync SDK documentation.
 
-3. Open `CustomApp.ts` and search for `TODO`.
+3. Open `/src/App.ts` and search for `TODO`.
 
 - You will find comments in the file that explain how to customize the app file for your needs.
 
-4. Next, open `DataSource.ts` and search for `TODO` comments there.
+4. Next, open `/src/DataSource.ts` and search for `TODO` comments there.
 
-5. Update the declarative files under `/json` to fit your service.
+5. Update the declarative files under `/src/json` to fit your service.
 
-- For more information on the files under `/json` see [Declarative Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
+- For more information on the files under `/src/json` see [JSON Files Reference](https://github.com/Hyperproof/hypersync-sdk/blob/main/doc/050-json-files-reference.md) in the Hypersync SDK documentation.
 
 6. Update the four SVGs with images for your target service.
 

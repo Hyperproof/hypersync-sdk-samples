@@ -1,5 +1,4 @@
 import {
-  CustomAuthCredentials,
   DataSetResult,
   DataObject,
   DataSourceBase,
@@ -10,10 +9,10 @@ import {
  * Custom data source for the THE_SERVICE Hypersync app.
  */
 export class DataSource extends DataSourceBase {
-  private credentials: CustomAuthCredentials;
-  constructor(credentials: CustomAuthCredentials) {
+  private accessToken: string;
+  constructor(accessToken: string) {
     super();
-    this.credentials = credentials;
+    this.accessToken = accessToken;
   }
 
   // TODO: Update the `getData` call below to retrieve data from your service.
