@@ -60,7 +60,7 @@ export class App extends HypersyncApp {
   }
 
   /**
-   * Creates a data source that uses custom authentication.
+   * Creates a data source that uses OAuth for authorization.
    *
    * @param accessToken The OAuth access token.
    */
