@@ -52,10 +52,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@hyperproof/hypersync-sdk@^0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-0.9.2.tgz#0100b55f448557934dd5586d292ba5298b9a4dc3"
-  integrity sha512-70Fsg/2UnQpW8tFgOZC0GQISdJ+qjv352SHaXAm4+jkOQd/1mfkdqDD2NYl+/xqEX+O9/IiaDiimJLNstfHOfg==
+"@hyperproof/hypersync-sdk@^0.9.3":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-0.9.3.tgz#e7c46e6b7221c325b424bc1535eb2e8c4c5c4ad3"
+  integrity sha512-Ihkl6mkCdUrGssE9390Strmml8HUQcyEiyrz5DgsXIeuO8ZR1xniyjBV7fv1x18SdCG7/oQB9vQBt1lldIGfbg==
   dependencies:
     "@fusebit/add-on-sdk" "3.1.0"
     "@fusebit/oauth-connector" "1.3.1"
