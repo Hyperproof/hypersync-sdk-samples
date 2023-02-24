@@ -1,4 +1,5 @@
 {
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofType.schema.json",
   "description": "{{messages.PROOF_TYPE_BOOKS_BY_AUTHOR}}",
   "criteria": [
     { "name": "authorSearch", "page": 0 },
