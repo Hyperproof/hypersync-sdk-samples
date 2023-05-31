@@ -4,7 +4,7 @@
   "app_hyperproof": {
     "name": "TODO: App Name in Hyperproof",
     "appType": "hypersync",
-    "authType": "custom",
+    "authType": "oauth",
     "category": "TODO: Your app's cateogry (e.g. Identity Services)",
     "descriptionCapabilities": "TODO: This integration extracts users and group information from the THE_SERVICE service",
     "debug": true,

@@ -56,7 +56,7 @@ export class App extends HypersyncApp {
    * @param userProfile The profile returned by getUserProfile.
    */
   public getUserAccountName(userProfile: IServiceUser) {
-    return `(${userProfile.firstName} ${userProfile.lastName})`;
+    return `${userProfile.firstName} ${userProfile.lastName}`;
   }
 
   /**
