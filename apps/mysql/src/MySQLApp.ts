@@ -1,5 +1,5 @@
+import { CredentialFieldType } from '@hyperproof/hypersync-models';
 import {
-  CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
   IDataSource,
@@ -28,17 +28,17 @@ export class MySQLApp extends HypersyncApp {
         fields: [
           {
             name: 'host',
-            type: CredentialFieldType.TEXT,
+            type: CredentialFieldType.Text,
             label: Messages.LABEL_HOST
           },
           {
             name: 'username',
-            type: CredentialFieldType.TEXT,
+            type: CredentialFieldType.Text,
             label: Messages.LABEL_USERNAME
           },
           {
             name: 'password',
-            type: CredentialFieldType.PASSWORD,
+            type: CredentialFieldType.Password,
             label: Messages.LABEL_PASSWORD
           }
         ]

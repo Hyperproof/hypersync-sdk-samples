@@ -33,12 +33,12 @@
         "firstName": "givenName",
         "lastName": "surname",
         "email": "emailAddress",
-        "status": "$mlookup('statuses', status)"
+        "status": "$vlookup('statuses', status)"
       },
       "result": "array"
     }
   },
-  "messages": {
+  "valueLookups": {
     "statuses": {
       "active": "Active",
       "deactivated": "Inactive"
