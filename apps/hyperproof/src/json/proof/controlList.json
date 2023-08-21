@@ -1,0 +1,56 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofType.schema.json",
+  "description": "{{messages.PROOF_TYPE_CONTROL_LIST}}",
+  "criteria": [],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_CONTROL_LIST}}",
+    "format": "tabular",
+    "orientation": "landscape",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_CONTROL_LIST}}",
+    "dataSet": "controls",
+    "dataSetParams": {},
+    "noResultsMessage": "{{messages.NO_CONTROLS}}",
+    "fields": [
+      {
+        "property": "controlIdentifier",
+        "label": "{{messages.LABEL_CONTROL_IDENTIFIER}}",
+        "width": "100px",
+        "type": "text"
+      },
+      {
+        "property": "name",
+        "label": "{{messages.LABEL_NAME}}",
+        "width": "400px",
+        "type": "text"
+      },
+      {
+        "property": "health",
+        "label": "{{messages.LABEL_HEALTH}}",
+        "width": "100px",
+        "type": "text"
+      },
+      {
+        "property": "implementation",
+        "label": "{{messages.LABEL_IMPLEMENTATION}}",
+        "width": "100px",
+        "type": "text"
+      },
+      {
+        "property": "testingStatus",
+        "label": "{{messages.LABEL_TESTING_STATUS}}",
+        "width": "100px",
+        "type": "text"
+      },
+      {
+        "property": "freshness",
+        "label": "{{messages.LABEL_FRESHNESS}}",
+        "width": "100px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://dev.hyperproof.app/org/{{dataSource.orgId}}/controls"
+  }
+}

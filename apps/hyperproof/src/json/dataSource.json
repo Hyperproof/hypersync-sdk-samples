@@ -1,0 +1,108 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/restDataSource.schema.json",
+  "baseUrl": "https://api.dev.hyperproof.app",
+  "dataSets": {
+    "currentUser": {
+      "description": "Returns information about the authorized user.",
+      "documentation": "https://developer.hyperproof.app/api-details#api=users-api&operation=get-user",
+      "url": "v1/users/me",
+      "transform": {
+        "id": "id",
+        "firstName": "givenName",
+        "lastName": "surname",
+        "email": "email"
+      },
+      "result": "object"
+    },
+    "controls": {
+      "description": "Returns a list of all the controls in the Hyperproof organization.",
+      "documentation": "https://developer.hyperproof.app/api-details#api=controls-api&operation=get-controls",
+      "url": "v1/controls?status=active",
+      "transform": {
+        "controlIdentifier": "controlIdentifier",
+        "name": "name",
+        "health": "$vlookup('healthValues', health)",
+        "implementation": "$vlookup('implementationValues', implementation)",
+        "testingStatus": "$vlookup('testingStatuses', testingStatus)",
+        "freshness": "$vlookup('freshnessValues', freshness)"
+      },
+      "sort": [{ "property": "controlIdentifier", "direction": "ascending" }],
+      "result": "array"
+    },
+    "labels": {
+      "description": "Returns a list of all the labels in the Hyperproof organization.",
+      "documentation": "https://developer.hyperproof.app/api-details#api=labels-api&operation=get-labels",
+      "url": "v1/labels?status=active",
+      "transform": {
+        "name": "name",
+        "description": "description",
+        "freshness": "$vlookup('freshnessValues', freshness)"
+      },
+      "sort": [{ "property": "name", "direction": "ascending" }],
+      "result": "array"
+    },
+    "users": {
+      "description": "Returns a list of all the users in the Hyperproof organization.",
+      "documentation": "https://developer.hyperproof.app/api-details#api=users-api&operation=get-org-users",
+      "url": "v1/users?expand=organizationRoleId",
+      "joins": [
+        {
+          "alias": "r",
+          "dataSet": "roles",
+          "on": [
+            { "leftProperty": "organizationRoleId", "rightProperty": "id" }
+          ]
+        }
+      ],
+      "transform": {
+        "id": "id",
+        "firstName": "givenName",
+        "lastName": "surname",
+        "email": "email",
+        "lastLogin": "lastLogin",
+        "role": "r.name"
+      },
+      "sort": [
+        { "property": "lastName", "direction": "ascending" },
+        { "property": "firstName", "direction": "ascending" }
+      ],
+      "result": "array"
+    },
+    "roles": {
+      "description": "Returns a list of all the roles in Hyperproof.",
+      "documentation": "https://developer.hyperproof.app/api-details#api=users-api&operation=get-org-users",
+      "url": "v1/roles",
+      "result": "array"
+    }
+  },
+  "valueLookups": {
+    "statuses": {
+      "active": "Active",
+      "deactivated": "Inactive"
+    },
+    "freshnessValues": {
+      "unknown": "--",
+      "noFreshness": "No Freshness",
+      "fresh": "Fresh",
+      "expired": "Expired"
+    },
+    "healthValues": {
+      "notAvailable": "--",
+      "healthy": "Healthy",
+      "atRisk": "At Risk",
+      "critical": "Critical"
+    },
+    "implementationValues": {
+      "unknown": "--",
+      "notStarted": "Not Started",
+      "inProgress": "In Progress",
+      "completed": "Completed"
+    },
+    "testingStatuses": {
+      "notTested": "Not Tested",
+      "inProgress": "In Progress",
+      "effective": "Effective",
+      "ineffective": "Ineffective"
+    }
+  }
+}

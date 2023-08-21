@@ -1,0 +1,23 @@
+{
+  "CONNECTOR_NAME": "Hyperproof",
+  "LABEL_CONTROL_IDENTIFIER": "Identifier",
+  "LABEL_EMAIL_ADDRESS": "Email Address",
+  "LABEL_FIRST_NAME": "First Name",
+  "LABEL_FRESHNESS": "Freshness",
+  "LABEL_HEALTH": "Health",
+  "LABEL_IMPLEMENTATION": "Implementation",
+  "LABEL_LAST_LOGIN": "Last Login",
+  "LABEL_LAST_NAME": "Last Name",
+  "LABEL_NAME": "Name",
+  "LABEL_ORGANIZATION_ID": "Organization ID",
+  "LABEL_ROLE": "Role",
+  "LABEL_STATUS": "Status",
+  "LABEL_TESTING_STATUS": "Testing Status",
+  "LABEL_USERNAME": "Username",
+  "NO_CONTROLS": "No controls found.",
+  "NO_LABELS": "No labels found.",
+  "NO_USERS": "No users found.",
+  "PROOF_TYPE_CONTROL_LIST": "Control List",
+  "PROOF_TYPE_LABEL_LIST": "Label List",
+  "PROOF_TYPE_USER_LIST": "User List"
+}
