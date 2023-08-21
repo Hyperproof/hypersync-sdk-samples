@@ -1,0 +1,50 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofType.schema.json",
+  "description": "{{messages.PROOF_TYPE_USER_LIST}}",
+  "criteria": [],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_USER_LIST}}",
+    "format": "tabular",
+    "orientation": "landscape",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_USER_LIST}}",
+    "dataSet": "users",
+    "dataSetParams": {},
+    "noResultsMessage": "{{messages.NO_USERS}}",
+    "fields": [
+      {
+        "property": "lastName",
+        "label": "{{messages.LABEL_LAST_NAME}}",
+        "width": "200px",
+        "type": "text"
+      },
+      {
+        "property": "firstName",
+        "label": "{{messages.LABEL_FIRST_NAME}}",
+        "width": "200px",
+        "type": "text"
+      },
+      {
+        "property": "email",
+        "label": "{{messages.LABEL_EMAIL_ADDRESS}}",
+        "width": "300px",
+        "type": "text"
+      },
+      {
+        "property": "state",
+        "label": "{{messages.LABEL_STATE}}",
+        "width": "100px",
+        "type": "text"
+      },
+      {
+        "property": "addedOn",
+        "label": "{{messages.LABEL_ADDED_ON}}",
+        "width": "200px",
+        "type": "date"
+      }
+    ],
+    "webPageUrl": "https://cloud.ibm.com/iam/users"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofTypes.schema.json",
+  "userList": {
+    "label": "{{messages.PROOF_TYPE_USER_LIST}}"
+  }
+}

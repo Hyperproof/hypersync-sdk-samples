@@ -1,0 +1,69 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/restDataSource.schema.json",
+  "dataSets": {
+    "currentUser": {
+      "description": "Returns information about the authorized user.",
+      "documentation": "https://cloud.ibm.com/apidocs/user-management#get-user-profile",
+      "url": "https://user-management.cloud.ibm.com/v2/accounts/{{accountId}}/users/{{iamId}}",
+      "transform": {
+        "userId": "user_id",
+        "email": "email",
+        "firstName": "firstname",
+        "lastName": "lastname",
+        "state": "state",
+        "addedOn": "added_on"
+      },
+      "sort": [
+        {
+          "property": "lastName",
+          "direction": "ascending"
+        },
+        {
+          "property": "firstName",
+          "direction": "ascending"
+        }
+      ],
+      "result": "object"
+    },
+    "organization": {
+      "description": "Returns a list of all the groups in My Service.",
+      "documentation": "https://cloud.ibm.com/orgs/{{orgId}}/settings",
+      "url": "https://cloud.ibm.com/orgs/{{orgId}}/settings",
+      "transform": {
+        "name": "name",
+        "title": "title",
+        "createdAt": "created_at"
+      },
+      "result": "object"
+    },
+    "users": {
+      "description": "Returns a list of all the users in the IBM Cloud account.",
+      "documentation": "https:/ /cloud.ibm.com/apidocs/user-management#list-users",
+      "url": "https://user-management.cloud.ibm.com/v2/accounts/{{accountId}}/users",
+      "property": "resources",
+      "transform": {
+        "id": "id",
+        "iamId": "iam_id",
+        "userId": "user_id",
+        "firstName": "firstname",
+        "lastName": "lastname",
+        "state": "state",
+        "email": "email",
+        "addedOn": "added_on"
+      },
+      "result": "array"
+    },
+    "buckets": {
+      "description": "",
+      "documentation": "https://cloud.ibm.com/apidocs/cos/cos-compatibility#listbuckets",
+      "url": "https://s3.{{region}}.cloud-object-storage.appdomain.cloud/",
+      "result": "array"
+    }
+  },
+  "messages": {
+    "statuses": {
+      "active": "Active",
+      "deactivated": "Inactive"
+    }
+  }
+}

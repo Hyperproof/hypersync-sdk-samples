@@ -1,0 +1,21 @@
+{
+  "CONNECTOR_NAME": "IBM Cloud",
+  "CREDENTIAL_INSTRUCTION_HEADER": "Please provide your your IBM Cloud account ID, IAM ID and API key.",
+  "ERROR_INVALID_CREDENTIALS": "Invalid account ID, IAM ID, or API key.",
+  "LABEL_ACCOUNT_ID": "Account ID",
+  "LABEL_ADDED_ON": "Account ID",
+  "LABEL_ALL_GROUPS": "All Groups",
+  "LABEL_API_KEY": "API Key",
+  "LABEL_EMAIL_ADDRESS": "Email Address",
+  "LABEL_FIRST_NAME": "First Name",
+  "LABEL_GROUP": "Group",
+  "LABEL_IAM_ID": "IAM ID",
+  "LABEL_LAST_NAME": "Last Name",
+  "LABEL_PASSWORD": "Password",
+  "LABEL_PROOF_TYPE": "Proof",
+  "LABEL_SERVICE_INSTANCE": "Service Instance",
+  "LABEL_STATE": "State",
+  "NO_USERS": "No users found.",
+  "PROOF_TYPE_BUCKET_LIST": "Bucket List",
+  "PROOF_TYPE_USER_LIST": "User List"
+}

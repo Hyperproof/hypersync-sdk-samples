@@ -1,0 +1,9 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/criteriaFields.schema.json",
+  "serviceInstance": {
+    "type": "text",
+    "property": "serviceInstance",
+    "label": "{{messages.LABEL_SERVICE_INSTANCE}}",
+    "isRequired": true
+  }
+}
