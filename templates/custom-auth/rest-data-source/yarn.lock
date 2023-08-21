@@ -43,8 +43,8 @@
 
 "@hyperproof/hypersync-sdk@^2.0.0":
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-2.0.0.tgz#500b8568def3f8e558f66305b68273639fe69308"
-  integrity sha512-eIIVgbjfZbHh6vovqBRcbfxBCQ8as3YR4jDZIPCpCSscnzZ/6eGhWfdVrj2SMbK2YfZN2memZ/rymRiKIaP4mg==
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-2.0.0.tgz#6d2b4d420dffe52ef700b06d7a633201bdf900d2"
+  integrity sha512-dc8bxCR1omf1DCHmqM7SxTr3B+38Lgyed69BXueCI6sNiDu+SSBaDeDZHCcbqrvOzeTSlzSf+9pPgEB8aRpeUQ==
   dependencies:
     "@hyperproof/hypersync-models" "4.1.4"
     "@hyperproof/integration-sdk" "0.8.1"
