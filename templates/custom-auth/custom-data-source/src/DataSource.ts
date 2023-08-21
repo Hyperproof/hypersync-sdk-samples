@@ -1,9 +1,8 @@
+import { DataObject, DataValueMap } from '@hyperproof/hypersync-models';
 import {
   CustomAuthCredentials,
   DataSetResult,
-  DataObject,
-  DataSourceBase,
-  DataValueMap
+  DataSourceBase
 } from '@hyperproof/hypersync-sdk';
 
 /**

@@ -1,5 +1,5 @@
+import { CredentialFieldType } from '@hyperproof/hypersync-models';
 import {
-  CredentialFieldType,
   CustomAuthCredentials,
   HypersyncApp,
   IDataSource,
@@ -28,12 +28,12 @@ export class App extends HypersyncApp {
         fields: [
           {
             name: 'username',
-            type: CredentialFieldType.TEXT,
+            type: CredentialFieldType.Text,
             label: Messages.LABEL_USERNAME
           },
           {
             name: 'password',
-            type: CredentialFieldType.PASSWORD,
+            type: CredentialFieldType.Password,
             label: Messages.LABEL_PASSWORD
           }
         ]
@@ -49,7 +49,7 @@ export class App extends HypersyncApp {
   public async validateCredentials(
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser> {
-    await Logger.debug('Validating credentails.');
+    await Logger.debug('Validating credentials.');
     try {
       const dataSource = new DataSource(credentials);
       const getDataresult = await dataSource.getDataObject<IServiceUser>(
