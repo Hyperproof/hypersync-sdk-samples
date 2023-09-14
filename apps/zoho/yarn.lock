@@ -36,18 +36,18 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@hyperproof/hypersync-models@4.1.4", "@hyperproof/hypersync-models@^4.1.4":
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-models/-/hypersync-models-4.1.4.tgz#c74897c00d3810ea61954c277ada6fbf04fa09a2"
-  integrity sha512-SkY2XohzNbVeX5Dn2cLHxORrw87e3/uQbcSwN6hqg4o1pkG4/QvnpnZ1m1+zHwgHCFFmH1ttnHwM3drdv7q18A==
+"@hyperproof/hypersync-models@4.2.0", "@hyperproof/hypersync-models@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-models/-/hypersync-models-4.2.0.tgz#a46d6b42c9c8bae1413139bfa40556d529e7a31e"
+  integrity sha512-GCieBFmCKMoi4kTLWEEKjd2WUXJYipLWg8P9WYuBCDP5VV2i32ALyc9ne6TaiPByvfhdQH/6Z0u6okPpQHvCwA==
 
-"@hyperproof/hypersync-sdk@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-2.0.0.tgz#6d2b4d420dffe52ef700b06d7a633201bdf900d2"
-  integrity sha512-dc8bxCR1omf1DCHmqM7SxTr3B+38Lgyed69BXueCI6sNiDu+SSBaDeDZHCcbqrvOzeTSlzSf+9pPgEB8aRpeUQ==
+"@hyperproof/hypersync-sdk@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-2.1.0.tgz#275a17364ac275c48d641fd7ebc0bc34de9da7df"
+  integrity sha512-q/HN6q7lcd242xXn6kno0FRmMgNW8RzIHJJ4CEMUb5KypG/SZSWtsNRJ7Ti+f/IERvOeZbjL5E1CK2yHXVHPtg==
   dependencies:
-    "@hyperproof/hypersync-models" "4.1.4"
-    "@hyperproof/integration-sdk" "0.8.1"
+    "@hyperproof/hypersync-models" "4.2.0"
+    "@hyperproof/integration-sdk" "0.9.0"
     "@js-joda/core" "3.2.0"
     "@js-joda/timezone" "2.5.0"
     "@types/express" "^4.17.13"
@@ -65,10 +65,10 @@
     uuid "8.3.2"
     xss "1.0.13"
 
-"@hyperproof/integration-sdk@0.8.1", "@hyperproof/integration-sdk@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@hyperproof/integration-sdk/-/integration-sdk-0.8.1.tgz#0eb4f6e24fcab9cc5587e3c2c0e72a97bf35b5be"
-  integrity sha512-USHpSarMaozj2+nF2awBeKQw7cOfNK7hZIpOr0vIGJRZYbwqRDRYzd6YUUUiLJknWa9niz/pWmfcgm7lDXEPEQ==
+"@hyperproof/integration-sdk@0.9.0", "@hyperproof/integration-sdk@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@hyperproof/integration-sdk/-/integration-sdk-0.9.0.tgz#9ddab9a87d797eb9dc0f4f736a460a1ba123b75c"
+  integrity sha512-MfYrroTKll8qx/YsVWRUVf0o6XJSBk+yW5Tc0ifSZTJXH6I1aKoKrxFjl8CDDqoRVJUKXgMvkzV7QsZmYvdMjw==
   dependencies:
     express "4.17.1"
     mock-http "1.1.0"
@@ -169,10 +169,15 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^18.11.0":
+"@types/node@*":
   version "18.11.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.7.tgz#8ccef136f240770c1379d50100796a6952f01f94"
   integrity sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==
+
+"@types/node@^16.18.48":
+  version "16.18.50"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.50.tgz#93003cf0251a2ecd26dad6dc757168d648519805"
+  integrity sha512-OiDU5xRgYTJ203v4cprTs0RwOCd5c5Zjv+K5P8KSqfiCsB1W3LcamTUMcnQarpq5kOYbhHfSOgIEJvdPyb5xyw==
 
 "@types/qs@*":
   version "6.9.7"
