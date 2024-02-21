@@ -1,0 +1,12 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/restDataSource.schema.json",
+  "baseUrl": "https://api.mocklets.com",
+  "dataSets": {
+    "delay": {
+      "description": "Delays a dummy response.",
+      "documentation": "https://dummyapis.com/dummy/delay-response",
+      "url": "p6749/delay",
+      "result": "object"
+    }
+  }
+}

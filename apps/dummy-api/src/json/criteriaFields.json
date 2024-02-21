@@ -1,0 +1,10 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/criteriaFields.schema.json",
+  "delay": {
+    "type": "text",
+    "property": "delay",
+    "label": "{{messages.LABEL_DELAY}}",
+    "placeholder": "{{messages.PLACEHOLDER_DELAY}}",
+    "isRequired": true
+  }
+}

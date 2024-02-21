@@ -1,0 +1,28 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofType.schema.json",
+  "description": "{{messages.PROOF_TYPE_DELAY}}",
+  "criteria": [{ "name": "delay", "page": 0 }],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_DELAY}}",
+    "format": "tabular",
+    "orientation": "portrait",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_DELAY}}",
+    "dataSet": "delay",
+    "dataSetParams": {
+      "delay": "{{criteria.delay}}"
+    },
+    "noResultsMessage": "{{messages.NO_RESPONSE}}",
+    "fields": [
+      {
+        "property": "result",
+        "label": "{{messages.LABLE_RESPONSE}}",
+        "width": "200px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://hub.dummyapis.com/delay?seconds={{criteria.delay}}"
+  }
+}

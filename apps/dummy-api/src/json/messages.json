@@ -1,0 +1,10 @@
+{
+  "CONNECTOR_NAME": "Dummy Api",
+  "CREDENTIAL_INSTRUCTION_BODY": "Please click Next.",
+  "CREDENTIAL_INSTRUCTION_HEADER": "The Dummy Api endpoint is public and does not require authentication.",
+  "LABEL_DELAY": "Delay",
+  "LABEL_RESPONSE": "Response",
+  "NO_RESPONSE": "No response.",
+  "PLACEHOLDER_DELAY": "5",
+  "PROOF_TYPE_DELAY": "Delay Request"
+}
