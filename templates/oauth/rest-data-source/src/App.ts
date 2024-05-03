@@ -1,5 +1,5 @@
-import { HypersyncApp, IDataSource } from '@hyperproof/hypersync-sdk';
-import { OAuthTokenResponse, Logger } from '@hyperproof/integration-sdk';
+import { HypersyncApp, IDataSource, Logger } from '@hyperproof/hypersync-sdk';
+import { OAuthTokenResponse } from '@hyperproof/integration-sdk';
 import { DataSource } from './DataSource';
 import Messages from './json/messages.json';
 

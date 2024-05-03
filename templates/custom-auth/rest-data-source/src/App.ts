@@ -1,13 +1,11 @@
 import {
-  HypersyncApp,
-  IDataSource,
-  IValidatedUser
-} from '@hyperproof/hypersync-sdk';
-import {
   CustomAuthCredentials,
   CredentialFieldType,
+  HypersyncApp,
+  IDataSource,
+  IValidatedUser,
   Logger
-} from '@hyperproof/integration-sdk';
+} from '@hyperproof/hypersync-sdk';
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
 import { DataSource } from './DataSource';
