@@ -41,10 +41,10 @@
   resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-models/-/hypersync-models-5.0.0.tgz#6c789d096e4a0203f29dbe77d0854cf1aa9b4929"
   integrity sha512-224/5q2fxJi9XgBjEZ5Cy8P+6vLKzSBtmDJs/gMG+byK8ftu3p406NLPaLBD2pg29+DmXT1QT8YtemcL7OVOUw==
 
-"@hyperproof/hypersync-sdk@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-3.0.1.tgz#271da9b2600d51889567fe93521ad2cbc8d59212"
-  integrity sha512-ox8rnQmM6Z87F02OuBaI9tQ+GF9R3eEvZE31p9lDksk/FAcK7NLCJYflyC2ZAJpAn+xvT3HeaO97tHo1a3FI4A==
+"@hyperproof/hypersync-sdk@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-3.0.2.tgz#e87b455b5468211f6f3f9c8dd1b407d2a22dda52"
+  integrity sha512-KONu6QPznpx4jqimIARi29m6c/U33Q+Kr8xmsoSHiuVM1Ihrw8gFhplsOXv1ZDJ7mu0yIJ2sAr4Gmb6bMk1KMA==
   dependencies:
     "@hyperproof/hypersync-models" "5.0.0"
     "@hyperproof/integration-sdk" "1.0.2"
