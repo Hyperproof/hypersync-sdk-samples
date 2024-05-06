@@ -36,7 +36,7 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@hyperproof/hypersync-models@5.0.0", "@hyperproof/hypersync-models@^5.0.0":
+"@hyperproof/hypersync-models@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-models/-/hypersync-models-5.0.0.tgz#6c789d096e4a0203f29dbe77d0854cf1aa9b4929"
   integrity sha512-224/5q2fxJi9XgBjEZ5Cy8P+6vLKzSBtmDJs/gMG+byK8ftu3p406NLPaLBD2pg29+DmXT1QT8YtemcL7OVOUw==
