@@ -1,5 +1,9 @@
-import { DataObject, DataValueMap } from '@hyperproof/hypersync-models';
-import { DataSetResult, DataSourceBase } from '@hyperproof/hypersync-sdk';
+import {
+  DataObject,
+  DataSetResult,
+  DataSourceBase,
+  DataValueMap
+} from '@hyperproof/hypersync-sdk';
 
 /**
  * Custom data source for the THE_SERVICE Hypersync app.

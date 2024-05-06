@@ -1,5 +1,7 @@
-import { IRestDataSourceConfig } from '@hyperproof/hypersync-models';
-import { RestDataSourceBase } from '@hyperproof/hypersync-sdk';
+import {
+  IRestDataSourceConfig,
+  RestDataSourceBase
+} from '@hyperproof/hypersync-sdk';
 import Messages from './json/messages.json';
 import config from './json/dataSource.json';
 

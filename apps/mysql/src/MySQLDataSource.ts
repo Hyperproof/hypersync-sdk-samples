@@ -1,6 +1,6 @@
-import { DataObject } from '@hyperproof/hypersync-models';
 import {
   CustomAuthCredentials,
+  DataObject,
   DataSetResult,
   DataSetResultStatus,
   IDataSource,

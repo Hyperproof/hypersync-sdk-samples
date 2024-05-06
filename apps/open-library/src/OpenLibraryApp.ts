@@ -1,9 +1,9 @@
 import {
   CustomAuthCredentials,
+  Logger,
   HypersyncApp,
   IDataSource,
-  IValidatedUser,
-  Logger
+  IValidatedUser
 } from '@hyperproof/hypersync-sdk';
 import { DataSource } from './DataSource';
 import Messages from './json/messages.json';

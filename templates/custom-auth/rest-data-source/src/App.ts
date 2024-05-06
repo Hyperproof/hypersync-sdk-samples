@@ -1,6 +1,6 @@
-import { CredentialFieldType } from '@hyperproof/hypersync-models';
 import {
   CustomAuthCredentials,
+  CredentialFieldType,
   HypersyncApp,
   IDataSource,
   IValidatedUser,
