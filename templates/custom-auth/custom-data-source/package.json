@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "npm run lint && tsc && npm run copydecl",
+    "up": "node ./build/start.js",
     "copydecl": "rimraf ./build/json && copyfiles -u 2 ./src/json/*.json ./src/json/proof/*.json ./build/json",
     "lint": "node ./node_modules/eslint/bin/eslint.js src/**/*.ts"
   },
