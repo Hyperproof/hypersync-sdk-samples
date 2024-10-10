@@ -1,6 +1,5 @@
+import { HttpServer } from '@hyperproof/integration-sdk';
 import { ZohoApp } from './ZohoApp';
-
-import { HttpServer } from '@hyperproof/hypersync-sdk';
 
 const server = new HttpServer();
 const app = new ZohoApp();

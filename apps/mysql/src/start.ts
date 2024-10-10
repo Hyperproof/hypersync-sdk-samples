@@ -1,6 +1,5 @@
+import { HttpServer } from '@hyperproof/integration-sdk';
 import { MySQLApp } from './MySQLApp';
-
-import { HttpServer } from '@hyperproof/hypersync-sdk';
 
 const server = new HttpServer();
 const app = new MySQLApp();

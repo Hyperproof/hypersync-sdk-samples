@@ -1,6 +1,5 @@
+import { HttpServer } from '@hyperproof/integration-sdk';
 import { OpenLibraryApp } from './OpenLibraryApp';
-
-import { HttpServer } from '@hyperproof/hypersync-sdk';
 
 const server = new HttpServer();
 const app = new OpenLibraryApp();

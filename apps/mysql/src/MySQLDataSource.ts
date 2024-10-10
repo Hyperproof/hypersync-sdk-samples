@@ -1,11 +1,10 @@
+import { DataObject } from '@hyperproof/hypersync-models';
 import {
-  CustomAuthCredentials,
-  DataObject,
   DataSetResult,
   DataSetResultStatus,
-  IDataSource,
-  Logger
+  IDataSource
 } from '@hyperproof/hypersync-sdk';
+import { CustomAuthCredentials, Logger } from '@hyperproof/integration-sdk';
 import mysql from 'mysql';
 
 /**
