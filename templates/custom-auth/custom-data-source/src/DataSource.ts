@@ -1,10 +1,6 @@
-import {
-  CustomAuthCredentials,
-  DataObject,
-  DataValueMap,
-  DataSetResult,
-  DataSourceBase
-} from '@hyperproof/hypersync-sdk';
+import { DataObject, DataValueMap } from '@hyperproof/hypersync-models';
+import { DataSetResult, DataSourceBase } from '@hyperproof/hypersync-sdk';
+import { CustomAuthCredentials } from '@hyperproof/integration-sdk';
 
 /**
  * Custom data source for the THE_SERVICE Hypersync app.
