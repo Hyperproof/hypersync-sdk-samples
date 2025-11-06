@@ -1,11 +1,13 @@
-import { CredentialFieldType } from '@hyperproof/hypersync-models';
 import {
-  CustomAuthCredentials,
   HypersyncApp,
   IDataSource,
   IValidatedUser,
-  Logger
 } from '@hyperproof/hypersync-sdk';
+import {
+  CredentialFieldType,
+  CustomAuthCredentials, 
+  Logger
+} from '@hyperproof/integration-sdk';
 import createHttpError from 'http-errors';
 import { StatusCodes } from 'http-status-codes';
 import mysql from 'mysql';

@@ -1,8 +1,6 @@
 import { IRestDataSourceConfig } from '@hyperproof/hypersync-models';
-import {
-  CustomAuthCredentials,
-  RestDataSourceBase
-} from '@hyperproof/hypersync-sdk';
+import { RestDataSourceBase } from '@hyperproof/hypersync-sdk';
+import { CustomAuthCredentials } from '@hyperproof/integration-sdk';
 import Messages from './json/messages.json';
 import config from './json/dataSource.json';
 
