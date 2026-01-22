@@ -1,0 +1,17 @@
+{
+  "CONNECTOR_NAME": "JSON Placeholder",
+  "CREDENTIAL_INSTRUCTION_BODY": "Please click Next.",
+  "CREDENTIAL_INSTRUCTION_HEADER": "The JSON Placeholder API is public and does not require authentication.",
+  "LABEL_ALL": "All",
+  "LABEL_EMAIL": "Email",
+  "LABEL_ID": "ID",
+  "LABEL_NAME": "Name",
+  "LABEL_PHONE": "Phone",
+  "LABEL_RESPONSE": "Response",
+  "LABEL_SPECIFIC_USER": "Specific User",
+  "LABEL_USERNAME": "Username",
+  "LABEL_WEBSITE": "Website",
+  "NO_RESPONSE": "No response.",
+  "PLACEHOLDER_SPECIFIC_USER": "Select a user",
+  "PROOF_TYPE_USERS": "Users"
+}

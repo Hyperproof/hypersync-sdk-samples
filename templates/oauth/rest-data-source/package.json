@@ -22,7 +22,7 @@
     "node": "^16.19.1 || ^18.17.1"
   },
   "dependencies": {
-    "@hyperproof/hypersync-models": "^5.1.0",
+    "@hyperproof/hypersync-models": "5.1.0",
     "@hyperproof/hypersync-sdk": "^3.2.0",
     "@hyperproof/integration-sdk": "^1.2.0",
     "http-errors": "2.0.0",

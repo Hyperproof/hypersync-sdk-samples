@@ -1,0 +1,20 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/restDataSource.schema.json",
+  "baseUrl": "https://jsonplaceholder.typicode.com",
+  "dataSets": {
+    "user": {
+      "description": "Returns one fake user by ID",
+      "documentation": "https://jsonplaceholder.typicode.com",
+      "url": "users/{{specificUser}}",
+      "result": "object",
+      "method": "GET"
+    },
+    "users": {
+      "description": "Returns a list of fake users.",
+      "documentation": "https://jsonplaceholder.typicode.com",
+      "url": "users",
+      "result": "array",
+      "method": "GET"
+    }
+  }
+}

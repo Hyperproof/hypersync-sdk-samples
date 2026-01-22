@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
-  "name": "zoho-hs",
-  "license": "MIT",
+  "name": "json-placeholder",
   "app_hyperproof": {
-    "name": "Zoho",
+    "name": "JSON Placeholder API",
     "appType": "hypersync",
-    "authType": "oauth",
-    "category": "Productivity",
-    "descriptionCapabilities": "This integration allows users to create Hypersyncs that extract data from Zoho.",
-    "debug": true
+    "authType": "custom",
+    "category": "Testing",
+    "descriptionCapabilities": "This integration uses the JSON Placeholder API service.",
+    "debug": true,
+    "staticIp": false
   },
   "scripts": {
     "prebuild": "yarn lint",
