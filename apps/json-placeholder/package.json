@@ -1,12 +1,12 @@
 {
   "version": "1.0.0",
-  "name": "todo-your-package-name",
+  "name": "json-placeholder",
   "app_hyperproof": {
-    "name": "TODO: App Name in Hyperproof",
+    "name": "JSON Placeholder API",
     "appType": "hypersync",
-    "authType": "oauth",
-    "category": "TODO: Your app's category (e.g. Identity Services)",
-    "descriptionCapabilities": "TODO: This integration extracts users and group information from the THE_SERVICE service",
+    "authType": "custom",
+    "category": "Testing",
+    "descriptionCapabilities": "This integration uses the JSON Placeholder API service.",
     "debug": true,
     "staticIp": false
   },

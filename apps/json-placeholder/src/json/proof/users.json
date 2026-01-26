@@ -1,0 +1,70 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/proofType.schema.json",
+  "description": "{{messages.PROOF_TYPE_USERS}}",
+  "criteria": [{ "name": "specificUser", "page": 0 }],
+  "proofSpec": {
+    "period": "monthly",
+    "useVersioning": true,
+    "suggestedName": "{{messages.PROOF_TYPE_USERS}}",
+    "format": "tabular",
+    "orientation": "portrait",
+    "title": "{{messages.CONNECTOR_NAME}}",
+    "subtitle": "{{messages.PROOF_TYPE_USERS}}",
+    "dataSet": "user",
+    "dataSetParams": {
+      "specificUser": "{{criteria.specificUser}}"
+    },
+    "noResultsMessage": "{{messages.NO_RESPONSE}}",
+    "fields": [
+      {
+        "property": "id",
+        "label": "{{messages.LABEL_ID}}",
+        "width": "30px",
+        "type": "number"
+      },
+      {
+        "property": "name",
+        "label": "{{messages.LABEL_NAME}}",
+        "width": "150px",
+        "type": "text"
+      },
+      {
+        "property": "username",
+        "label": "{{messages.LABEL_USERNAME}}",
+        "width": "120px",
+        "type": "text"
+      },
+      {
+        "property": "email",
+        "label": "{{messages.LABEL_EMAIL}}",
+        "width": "180px",
+        "type": "text"
+      },
+      {
+        "property": "phone",
+        "label": "{{messages.LABEL_PHONE}}",
+        "width": "150px",
+        "type": "text"
+      },
+      {
+        "property": "website",
+        "label": "{{messages.LABEL_WEBSITE}}",
+        "width": "150px",
+        "type": "text"
+      }
+    ],
+    "webPageUrl": "https://jsonplaceholder.typicode.com/guide/"
+  },
+  "overrides": [
+    {
+      "proofSpec": {
+        "dataSet": "users",
+        "dataSetParams": {}
+      },
+      "condition": {
+        "value": "{{criteria.specificUser}}",
+        "criteria": "{{constants.ID_ALL}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/Hyperproof/hypersync-sdk/schema/criteriaFields.schema.json",
+  "specificUser": {
+    "type": "select",
+    "property": "specificUser",
+    "label": "{{messages.LABEL_SPECIFIC_USER}}",
+    "placeholder": "{{messages.PLACEHOLDER_SPECIFIC_USER}}",
+    "isRequired": false,
+    "dataSet": "users",
+    "fixedValues": [
+      {
+        "value": "{{constants.ID_ALL}}",
+        "label": "{{messages.LABEL_ALL}}"
+      }
+    ],
+    "labelProperty": "name",
+    "valueProperty": "id"
+  }
+}

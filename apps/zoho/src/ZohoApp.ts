@@ -2,6 +2,8 @@ import { HypersyncApp, IDataSource } from '@hyperproof/hypersync-sdk';
 import { Logger, OAuthTokenResponse } from '@hyperproof/integration-sdk';
 import Messages from './json/messages.json';
 import { ZohoDataSource } from './ZohoDataSource';
+import createHttpError from 'http-errors';
+import { StatusCodes } from 'http-status-codes';
 
 interface IZohoUserProfile {
   loginId: string;
@@ -24,9 +26,17 @@ export class ZohoApp extends HypersyncApp {
   async getUserProfile(tokenContext: OAuthTokenResponse) {
     await Logger.debug('Getting Zoho user profile.');
     const dataSource = new ZohoDataSource(tokenContext.access_token);
-    const userInfo = await dataSource.getDataObject('currentUser');
+    const userInfo = await dataSource.getDataObject<IZohoUserProfile>(
+      'currentUser'
+    );
+    if (!userInfo.data.loginId) {
+      throw createHttpError(
+        StatusCodes.UNAUTHORIZED,
+        'You must create at least one Portal in your Zoho CRM instance'
+      );
+    }
     const userProfile: IZohoUserProfile = {
-      loginId: userInfo.data.loginId as string
+      loginId: userInfo.data.loginId
     };
     return userProfile;
   }
