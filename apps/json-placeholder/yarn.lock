@@ -62,13 +62,13 @@
 
 "@hyperproof/hypersync-models@6.0.0":
   version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-models/-/hypersync-models-6.0.0.tgz#ddbcd9b40c18db7d01ac2c8f945a05ab250f4114"
-  integrity sha512-uTGEQaUbVJyXaIteKXv6wVa+/zrtD9Jfc7Pmu8q4MGr0WgpBOMZd8pIwK41l3rNzWbWTMewOCV028iv4pXpfAw==
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-models/-/hypersync-models-6.0.0.tgz#0422cb514ceec71be0b2d3ccab01fc2b1bf891da"
+  integrity sha512-gLLvb+5wypfTym1x67FG7EPwP1eYgoc3i6vGS0/r1RMclQdogQ9FNSMyzP0/fOv8VYdfU14YHY2xspdQimxA3w==
 
 "@hyperproof/hypersync-sdk@6.0.0":
   version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-6.0.0.tgz#10b650148d1e82e66966408b9999d258c81c5ff5"
-  integrity sha512-ryKN8Cc3phO0GZ6pPx+Uj5b6UCZP2Cbx42s6fHzrGeveTEx7/31wkeGXxCn3z7N5CGGNyBSnyRGQdEmXN7zLjQ==
+  resolved "https://registry.yarnpkg.com/@hyperproof/hypersync-sdk/-/hypersync-sdk-6.0.0.tgz#7ade1e4ed5803acb826b5d21ea1a4f95b5f64145"
+  integrity sha512-TtDUFSnuD5gvTuEzOXkFqYI18YMKXZBfX55Tc0cirCcC343XWeM0yr7Ej1cY/l4hLey0QUjzF1u/IPHaQeFHfQ==
   dependencies:
     "@hyperproof/hypersync-models" "6.0.0"
     "@hyperproof/integration-sdk" "6.0.0"
@@ -92,8 +92,8 @@
 
 "@hyperproof/integration-sdk@6.0.0":
   version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@hyperproof/integration-sdk/-/integration-sdk-6.0.0.tgz#c6aebdf9353f589852fa73c3b01296e0376c6e74"
-  integrity sha512-GVRo3C0GFF1LL3drQN8GFKZVhapN0kgKLZaVaxxMdO8O6+gh+VTQhN60iGMWMx1DTC4OErJ9JJNHuImYd7yszQ==
+  resolved "https://registry.yarnpkg.com/@hyperproof/integration-sdk/-/integration-sdk-6.0.0.tgz#de642ccd512c77041e3020f7d0fab67902ed09d2"
+  integrity sha512-LQ7U/iH9MrXYj5e1kWhP0hsLp9RzdHEADDrHE6TGBYj/UVfI2yk3E9eG43Fo4rmV0ZjhvVGSbgYVh50NvNTQCg==
   dependencies:
     "@hyperproof/hypersync-models" "6.0.0"
     "@js-joda/core" "3.2.0"
@@ -351,9 +351,9 @@
     form-data "^4.0.4"
 
 "@types/node@*":
-  version "25.0.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.9.tgz#81ce3579ddf67cae812a9d49c8a0ab90c82e7782"
-  integrity sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.1.0.tgz#95cc584f1f478301efc86de4f1867e5875e83571"
+  integrity sha512-t7frlewr6+cbx+9Ohpl0NOTKXZNV9xHRmNOvql47BFJKcEG1CxtxlPEEe+gR9uhVWM4DwhnvTF110mIL4yP9RA==
   dependencies:
     undici-types "~7.16.0"
 
@@ -788,9 +788,9 @@ core-util-is@~1.0.0:
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
 cors@^2.8.5:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
-  integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
+  version "2.8.6"
+  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.6.tgz#ff5dd69bd95e547503820d29aba4f8faf8dfec96"
+  integrity sha512-tJtZBBHA6vjIAaF6EnIaq6laBBP9aq/Y3ouVJjEfoHbRBcHBAHYcMh/w8LDrk2PvIMMq8gmopa5D4V8RmbrxGw==
   dependencies:
     object-assign "^4"
     vary "^1"
