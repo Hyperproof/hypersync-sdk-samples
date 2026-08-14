@@ -36,7 +36,7 @@ export class OpenLibraryApp extends HypersyncApp {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser<IServiceUser>> {
-    await Logger.debug('Validating credentials.');
+    Logger.debug('Validating credentials.');
     // The Open Library API is public and does not require authentication.
     return {
       userId: 'anonymous_user',
@@ -68,7 +68,7 @@ export class OpenLibraryApp extends HypersyncApp {
   public async createDataSource(
     credentials: CustomAuthCredentials
   ): Promise<IDataSource> {
-    await Logger.debug('Creating data source.');
+    Logger.debug('Creating data source.');
     return new DataSource(credentials);
   }
 }
