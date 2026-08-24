@@ -51,7 +51,7 @@ export class App extends HypersyncApp {
   public async validateCredentials(
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser> {
-    await Logger.debug('Validating credentials.');
+    Logger.debug('Validating credentials.');
     try {
       const dataSource = new DataSource(credentials);
       // TODO: Clean this up when HYP-29105 is fixed.
@@ -64,8 +64,8 @@ export class App extends HypersyncApp {
         profile: serviceUser
       };
     } catch (err) {
-      await Logger.debug('Credential validation failed.');
-      await Logger.debug(err);
+      Logger.debug('Credential validation failed.');
+      Logger.debug(err);
       throw createHttpError(
         StatusCodes.UNAUTHORIZED,
         Messages.ERROR_INVALID_CREDENTIALS
@@ -94,7 +94,7 @@ export class App extends HypersyncApp {
   public async createDataSource(
     credentials: CustomAuthCredentials
   ): Promise<IDataSource> {
-    await Logger.debug('Creating data source.');
+    Logger.debug('Creating data source.');
     return new DataSource(credentials);
   }
 }

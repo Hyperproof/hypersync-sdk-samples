@@ -24,7 +24,7 @@ export class App extends HypersyncApp {
    * @param tokenContext An object representing the result of the getAccessToken call.
    */
   async getUserProfile(tokenContext: OAuthTokenResponse) {
-    await Logger.debug('Getting user profile.');
+    Logger.debug('Getting user profile.');
     const dataSource = new DataSource(tokenContext.access_token);
     const userInfo = await dataSource.getDataObject<IServiceUser>(
       'currentUser'
@@ -38,7 +38,7 @@ export class App extends HypersyncApp {
    * @param userProfile The profile of the user returned by getUserProfile.
    */
   public async getUserId(userProfile: IServiceUser) {
-    await Logger.debug('Getting user ID.');
+    Logger.debug('Getting user ID.');
     return userProfile.userId;
   }
 
@@ -61,7 +61,7 @@ export class App extends HypersyncApp {
    * @param accessToken The OAuth access token.
    */
   public async createDataSource(accessToken: string): Promise<IDataSource> {
-    await Logger.debug('Creating data source.');
+    Logger.debug('Creating data source.');
     return new DataSource(accessToken);
   }
 }

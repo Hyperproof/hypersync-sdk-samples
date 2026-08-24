@@ -19,7 +19,7 @@ export class MySQLDataSource implements IDataSource {
   async getData(
     dataSetName: string
   ): Promise<DataSetResult<DataObject | DataObject[]>> {
-    await Logger.debug(`Getting data: ${dataSetName}`);
+    Logger.debug(`Getting data: ${dataSetName}`);
 
     const { host, username, password } = this.credentials as {
       [key: string]: string;
@@ -36,7 +36,7 @@ export class MySQLDataSource implements IDataSource {
     try {
       switch (dataSetName) {
         case 'hosts': {
-          await Logger.info('Retrieving list of hosts.');
+          Logger.info('Retrieving list of hosts.');
           const data = await new Promise<DataObject[]>((resolve, reject) => {
             connection.query(
               'SELECT DISTINCT host FROM user',
@@ -57,7 +57,7 @@ export class MySQLDataSource implements IDataSource {
         }
 
         case 'users': {
-          await Logger.info('Retrieving list of users.');
+          Logger.info('Retrieving list of users.');
           const data = await new Promise<DataObject[]>((resolve, reject) => {
             connection.query(
               'SELECT DISTINCT * FROM user',

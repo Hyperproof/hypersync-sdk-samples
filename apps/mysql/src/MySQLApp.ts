@@ -58,7 +58,7 @@ export class MySQLApp extends HypersyncApp {
   public async validateCredentials(
     credentials: CustomAuthCredentials
   ): Promise<IValidatedUser<IMySQLUser>> {
-    await Logger.debug('Validating credentials.');
+    Logger.debug('Validating credentials.');
     try {
       // Connect to the server using the credentials.
       const { host, username, password } = credentials as {
@@ -75,7 +75,7 @@ export class MySQLApp extends HypersyncApp {
       connection.connect();
       connection.end();
 
-      await Logger.debug('MySQL connection successful!');
+      Logger.debug('MySQL connection successful!');
       return {
         userId: username as string,
         profile: {
@@ -84,8 +84,8 @@ export class MySQLApp extends HypersyncApp {
         }
       };
     } catch (err) {
-      await Logger.debug('MySQL credentials validation failed.');
-      await Logger.debug(err);
+      Logger.debug('MySQL credentials validation failed.');
+      Logger.debug(err);
       throw createHttpError(
         StatusCodes.UNAUTHORIZED,
         Messages.ERROR_INVALID_CREDENTIALS
@@ -112,7 +112,7 @@ export class MySQLApp extends HypersyncApp {
   public async createDataSource(
     credentials: CustomAuthCredentials
   ): Promise<IDataSource> {
-    await Logger.debug('Creating data source.');
+    Logger.debug('Creating data source.');
     return new MySQLDataSource(credentials);
   }
 }
